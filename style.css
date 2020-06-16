@@ -10,8 +10,14 @@ body {
 }
 
 .head-container {
+  border: 3px dashed black;
+}
+
+.head-container h3 {
+  padding: 1% 0%;
   background-color: #ffe600;
   text-align: center;
+  font-size: 22x;
 }
 
 /*This part is for avatar*/
@@ -28,12 +34,12 @@ body {
 /*This part is for piano*/
 .piano-container {
   text-align: center;
+  padding-bottom: 5%;
 }
 
 .piano {
   display: inline-flex;
   height: 100px;
-  padding-bottom: 3%;
 }
 
 #f,    /*These are for all keys in piano*/
@@ -121,15 +127,20 @@ body {
 }
 
 /*This part is for lyric*/
-.lyric-box {
+.lyric-box-container {
   display: grid;
   background-color: white;
   border: 3px solid black;
+  width: 350px;
+}
+
+.lyric-box {
+  background-color: silver;
 }
 
 /*This part is for footer*/
 footer {
-  padding-top: 3%;
+  padding: 3% 0%;
   text-align: center;
   font-weight: bold;
 }
