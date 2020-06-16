@@ -1,0 +1,51 @@
+.lyric-grid-container {
+  width: 300px;  
+}
+
+.lyric-grid-one,
+.lyric-grid-two,
+.lyric-grid-three,
+.lyric-grid-four {
+  display: grid;
+  position: absolute;
+  background-color: white;
+  border: 3px solid black;
+  width: 300px;
+  height: 15%;
+}
+
+/* First lyric */
+.lyric-grid-one {
+  z-index: 4;
+}
+
+.lyric-grid-one .lyric-box-one {
+  background-color: silver;
+}
+
+/* Second lyric */
+.lyric-grid-two {
+  z-index: 3;
+}
+
+.lyric-grid-two .lyric-box-one {
+  background-color: silver;
+}
+
+/* Third lyric */
+.lyric-grid-three {
+  z-index: 2;
+}
+
+.lyric-grid-three .lyric-box-one {
+  background-color: silver;
+}
+
+/* Fourth lyric */
+.lyric-grid-four {
+  z-index: 1;
+}
+
+.lyric-grid-four .lyric-box-one {
+  background-color: silver;
+}
