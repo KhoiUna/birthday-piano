@@ -6,6 +6,7 @@
 
 body {
   background-color: #faff01;
+  width: fit-content;
 }
 
 .head-container {
@@ -15,8 +16,8 @@ body {
 
 /*This part is for avatar*/
 .avatar {
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   text-align: center;
 }
 
@@ -36,34 +37,34 @@ body {
 }
 
 #f,    /*These are for all keys in piano*/
-#g,
-#a,
-#b,
-#c,
-#d,
-#e,
-#f-high,
-#g-high,
-#a-high,
-#b-high {
+  #g,
+  #a,
+  #b,
+  #c,
+  #d,
+  #e,
+  #f-high,
+  #g-high,
+  #a-high,
+  #b-high {
   cursor: pointer;
   background-color: white;
-  width: 20px;
+  width: 30px;
   margin: 0%;
   position: relative;
   left: 15%;
 }
 
 #f,             /*These are for piano key's border*/
-#g,
-#a,
-#b,
-#c,
-#d,
-#e,
-#f-high,
-#g-high,
-#a-high {
+  #g,
+  #a,
+  #b,
+  #c,
+  #d,
+  #e,
+  #f-high,
+  #g-high,
+  #a-high {
   border-right: 2px solid black;
 }
 
@@ -71,20 +72,19 @@ body {
   /*This is for the letters in the piano key*/
   position: relative;
   top: 75%;
-  /* text-align: center; */
 }
 
 #black-key-one,             /*This is for black keys*/
-#black-key-two,
-#black-key-three,
-#black-key-four,
-#black-key-five,
-#black-key-six,
-#black-key-seven,
-#black-key-eight {
+  #black-key-two,
+  #black-key-three,
+  #black-key-four,
+  #black-key-five,
+  #black-key-six,
+  #black-key-seven,
+  #black-key-eight {
   position: relative;
   height: 60px;
-  width: 10px;
+  width: 16px;
   cursor: pointer;
   border: 2px solid black;
   background-color: black;
@@ -92,7 +92,7 @@ body {
 }
 
 #black-key-two {
-  right: 46.6%;
+  right: 47%;
 }
 
 #black-key-three {
