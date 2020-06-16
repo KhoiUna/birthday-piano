@@ -7,13 +7,14 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/lyric.css" />
     <title>PIANO</title>
   </head>
   <body>
     <header>
       <div class="head-container">
-        <h3>PIANO FUN</h3>
+        <h3>HAPPY BIRTHDAY</h3>
         <h3 id="name">.......................</h3>
       </div>
     </header>
@@ -21,6 +22,7 @@
       <div class="avatar">
         <img id="avatar" src="avatar.jpg" width="150px" />
       </div>
+      <!-- This part is for piano -->
       <div class="piano-container">
         <div class="piano">
           <!--These are the white keys-->
@@ -35,7 +37,7 @@
           <div id="g-high"><p>G</p></div>
           <div id="a-high"><p>A</p></div>
           <div id="b-high"><p>B</p></div>
-          <br />
+
           <!--These are the black keys-->
           <div id="black-key-one"></div>
           <div id="black-key-two"></div>
@@ -47,9 +49,28 @@
           <div id="black-key-eight"></div>
         </div>
       </div>
-      <div class="lyric-box-container">
-        <div class="lyric-box">
-          <div>hi</div>
+
+      <!-- This part is for lyric -->
+      <div class="lyric-grid-container">
+        <div class="lyric-grid-one">
+          <div class="lyric-box">
+            <div>one</div>
+          </div>
+        </div>
+        <div class="lyric-grid-two">
+          <div class="lyric-box">
+            <div>two</div>
+          </div>
+        </div>
+        <div class="lyric-grid-three">
+          <div class="lyric-box">
+            <div>three</div>
+          </div>
+        </div>
+        <div class="lyric-grid-four">
+          <div class="lyric-box">
+            <div>four</div>
+          </div>
         </div>
       </div>
     </main>
@@ -57,6 +78,6 @@
       <p><a href="#" style="color: black;">&copy; A product of Code_Bros</a></p>
     </footer>
 
-    <script src="changeColor.js"></script>
+    <script src="./js/changeColor.js"></script>
   </body>
 </html>
