@@ -4,10 +4,13 @@
   font-family: "IBM Plex Sans", sans-serif;
 }
 
-body {
-  background-color: #faff01;
+html {
   width: fit-content;
   text-align: center;
+}
+
+body {
+  background-color: #faff01;
 }
 
 .head-container {
