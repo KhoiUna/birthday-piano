@@ -129,21 +129,9 @@ body {
   right: 19%;
 }
 
-/*This part is for lyric*/
-.lyric-box-container {
-  display: grid;
-  background-color: white;
-  border: 3px solid black;
-  width: 350px;
-}
-
-.lyric-box {
-  background-color: silver;
-}
-
 /*This part is for footer*/
 footer {
-  padding: 3% 0%;
+  padding: 30% 0%;
   text-align: center;
   font-weight: bold;
 }
