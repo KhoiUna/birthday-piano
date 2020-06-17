@@ -1,5 +1,5 @@
 const silver = (event) => {
-  event.target.style.backgroundColor = "silver";
+  event.target.style.backgroundColor = "red";
 };
 
 const white = (event) => {
