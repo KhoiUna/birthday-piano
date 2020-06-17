@@ -14,18 +14,20 @@ const black = (event) => {
 
 // This part is for white keys
 const f = document.querySelector("#f");
-f.addEventListener("mousedown", (event) => {
+f.addEventListener("mousedown", () => {
   silver(event);
+  fNote.play();
 });
-f.addEventListener("mouseup", (event) => {
+f.addEventListener("mouseup", () => {
   white(event);
+  fNote.pause();
 });
 
 const g = document.querySelector("#g");
-g.addEventListener("mousedown", (event) => {
+g.addEventListener("mousedown", () => {
   silver(event);
 });
-g.addEventListener("mouseup", (event) => {
+g.addEventListener("mouseup", () => {
   white(event);
 });
 
