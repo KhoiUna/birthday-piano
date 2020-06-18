@@ -1,3 +1,16 @@
+const silver = (event) => {
+  event.target.style.backgroundColor = "silver";
+};
+
+const white = (event) => {
+  event.target.style.backgroundColor = "white";
+  event.target.style.borderColor = "black";
+};
+
+const black = (event) => {
+  event.target.style.backgroundColor = "black";
+  event.target.style.borderColor = "black";
+};
 //This part is for touch events:
 
 // This part is for white keys
@@ -183,5 +196,3 @@ blackEight.addEventListener("touchstart", () => {
 blackEight.addEventListener("touchend", () => {
   black(event);
 });
-
-activate(event.type);
