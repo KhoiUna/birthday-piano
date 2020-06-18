@@ -12,6 +12,16 @@ const black = (event) => {
   event.target.style.borderColor = "black";
 };
 
+const activate = (event) => {
+  if (event === "mousedown" || event === "mouseup") {
+    event.preventDefault();
+  } else if (event === "touchstart" || event === "touchend") {
+    event.preventDefault();
+  }
+};
+
+//This part is for mouse events:
+
 // This part is for white keys
 const f = document.querySelector("#f");
 f.addEventListener("mousedown", () => {
@@ -32,146 +42,148 @@ g.addEventListener("mouseup", () => {
 });
 
 const a = document.querySelector("#a");
-a.addEventListener("mousedown", (event) => {
+a.addEventListener("mousedown", () => {
   silver(event);
 });
-a.addEventListener("mouseup", (event) => {
+a.addEventListener("mouseup", () => {
   white(event);
 });
 
 const b = document.querySelector("#b");
-b.addEventListener("mousedown", (event) => {
+b.addEventListener("mousedown", () => {
   silver(event);
 });
-b.addEventListener("mouseup", (event) => {
+b.addEventListener("mouseup", () => {
   white(event);
 });
 
 const c = document.querySelector("#c");
-c.addEventListener("mousedown", (event) => {
+c.addEventListener("mousedown", () => {
   silver(event);
 });
-c.addEventListener("mouseup", (event) => {
+c.addEventListener("mouseup", () => {
   white(event);
 });
 
 const d = document.querySelector("#d");
-d.addEventListener("mousedown", (event) => {
+d.addEventListener("mousedown", () => {
   silver(event);
 });
-d.addEventListener("mouseup", (event) => {
+d.addEventListener("mouseup", () => {
   white(event);
 });
 
 const e = document.querySelector("#e");
-e.addEventListener("mousedown", (event) => {
+e.addEventListener("mousedown", () => {
   silver(event);
 });
-e.addEventListener("mouseup", (event) => {
+e.addEventListener("mouseup", () => {
   white(event);
 });
 
 const fHigh = document.querySelector("#f-high");
-fHigh.addEventListener("mousedown", (event) => {
+fHigh.addEventListener("mousedown", () => {
   silver(event);
 });
-fHigh.addEventListener("mouseup", (event) => {
+fHigh.addEventListener("mouseup", () => {
   white(event);
 });
 
 const gHigh = document.querySelector("#g-high");
-gHigh.addEventListener("mousedown", (event) => {
+gHigh.addEventListener("mousedown", () => {
   silver(event);
 });
-gHigh.addEventListener("mouseup", (event) => {
+gHigh.addEventListener("mouseup", () => {
   white(event);
 });
 
 const aHigh = document.querySelector("#a-high");
-aHigh.addEventListener("mousedown", (event) => {
+aHigh.addEventListener("mousedown", () => {
   silver(event);
 });
-aHigh.addEventListener("mouseup", (event) => {
+aHigh.addEventListener("mouseup", () => {
   white(event);
 });
 
 const bHigh = document.querySelector("#b-high");
-bHigh.addEventListener("mousedown", (event) => {
+bHigh.addEventListener("mousedown", () => {
   silver(event);
 });
-bHigh.addEventListener("mouseup", (event) => {
+bHigh.addEventListener("mouseup", () => {
   white(event);
 });
 
 // This part is for black keys
 const blackOne = document.querySelector("#black-key-one");
-blackOne.addEventListener("mousedown", (event) => {
+blackOne.addEventListener("mousedown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackOne.addEventListener("mouseup", (event) => {
+blackOne.addEventListener("mouseup", () => {
   black(event);
 });
 
 const blackTwo = document.querySelector("#black-key-two");
-blackTwo.addEventListener("mousedown", (event) => {
+blackTwo.addEventListener("mousedown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackTwo.addEventListener("mouseup", (event) => {
+blackTwo.addEventListener("mouseup", () => {
   black(event);
 });
 
 const blackThree = document.querySelector("#black-key-three");
-blackThree.addEventListener("mousedown", (event) => {
+blackThree.addEventListener("mousedown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackThree.addEventListener("mouseup", (event) => {
+blackThree.addEventListener("mouseup", () => {
   black(event);
 });
 
 const blackFour = document.querySelector("#black-key-four");
-blackFour.addEventListener("mousedown", (event) => {
+blackFour.addEventListener("mousedown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackFour.addEventListener("mouseup", (event) => {
+blackFour.addEventListener("mouseup", () => {
   black(event);
 });
 
 const blackFive = document.querySelector("#black-key-five");
-blackFive.addEventListener("mousedown", (event) => {
+blackFive.addEventListener("mousedown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackFive.addEventListener("mouseup", (event) => {
+blackFive.addEventListener("mouseup", () => {
   black(event);
 });
 
 const blackSix = document.querySelector("#black-key-six");
-blackSix.addEventListener("mousedown", (event) => {
+blackSix.addEventListener("mousedown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackSix.addEventListener("mouseup", (event) => {
+blackSix.addEventListener("mouseup", () => {
   black(event);
 });
 
 const blackSeven = document.querySelector("#black-key-seven");
-blackSeven.addEventListener("mousedown", (event) => {
+blackSeven.addEventListener("mousedown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackSeven.addEventListener("mouseup", (event) => {
+blackSeven.addEventListener("mouseup", () => {
   black(event);
 });
 
 const blackEight = document.querySelector("#black-key-eight");
-blackEight.addEventListener("mousedown", (event) => {
+blackEight.addEventListener("mousedown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackEight.addEventListener("mouseup", (event) => {
+blackEight.addEventListener("mouseup", () => {
   black(event);
 });
+
+activate(event.type);
