@@ -1,19 +1,6 @@
-const silver = (event) => {
-  event.target.style.backgroundColor = "silver";
-};
-
-const white = (event) => {
-  event.target.style.backgroundColor = "white";
-  event.target.style.borderColor = "black";
-};
-
-const black = (event) => {
-  event.target.style.backgroundColor = "black";
-  event.target.style.borderColor = "black";
-};
+//This part is for touch events:
 
 // This part is for white keys
-const f = document.querySelector("#f");
 f.addEventListener("touchstart", () => {
   silver(event);
   fNote.play();
@@ -23,7 +10,6 @@ f.addEventListener("touchend", () => {
   fNote.pause();
 });
 
-const g = document.querySelector("#g");
 g.addEventListener("touchstart", () => {
   silver(event);
 });
@@ -31,147 +17,133 @@ g.addEventListener("touchend", () => {
   white(event);
 });
 
-const a = document.querySelector("#a");
-a.addEventListener("touchstart", (event) => {
+a.addEventListener("touchstart", () => {
   silver(event);
 });
-a.addEventListener("touchend", (event) => {
+a.addEventListener("touchend", () => {
   white(event);
 });
 
-const b = document.querySelector("#b");
-b.addEventListener("touchstart", (event) => {
+b.addEventListener("touchstart", () => {
   silver(event);
 });
-b.addEventListener("touchend", (event) => {
+b.addEventListener("touchend", () => {
   white(event);
 });
 
-const c = document.querySelector("#c");
-c.addEventListener("touchstart", (event) => {
+c.addEventListener("touchstart", () => {
   silver(event);
 });
-c.addEventListener("touchend", (event) => {
+c.addEventListener("touchend", () => {
   white(event);
 });
 
-const d = document.querySelector("#d");
-d.addEventListener("touchstart", (event) => {
+d.addEventListener("touchstart", () => {
   silver(event);
 });
-d.addEventListener("touchend", (event) => {
+d.addEventListener("touchend", () => {
   white(event);
 });
 
-const e = document.querySelector("#e");
-e.addEventListener("touchstart", (event) => {
+e.addEventListener("touchstart", () => {
   silver(event);
 });
-e.addEventListener("touchend", (event) => {
+e.addEventListener("touchend", () => {
   white(event);
 });
 
-const fHigh = document.querySelector("#f-high");
-fHigh.addEventListener("touchstart", (event) => {
+fHigh.addEventListener("touchstart", () => {
   silver(event);
 });
-fHigh.addEventListener("touchend", (event) => {
+fHigh.addEventListener("touchend", () => {
   white(event);
 });
 
-const gHigh = document.querySelector("#g-high");
-gHigh.addEventListener("touchstart", (event) => {
+gHigh.addEventListener("touchstart", () => {
   silver(event);
 });
-gHigh.addEventListener("touchend", (event) => {
+gHigh.addEventListener("touchend", () => {
   white(event);
 });
 
-const aHigh = document.querySelector("#a-high");
-aHigh.addEventListener("touchstart", (event) => {
+aHigh.addEventListener("touchstart", () => {
   silver(event);
 });
-aHigh.addEventListener("touchend", (event) => {
+aHigh.addEventListener("touchend", () => {
   white(event);
 });
 
-const bHigh = document.querySelector("#b-high");
-bHigh.addEventListener("touchstart", (event) => {
+bHigh.addEventListener("touchstart", () => {
   silver(event);
 });
-bHigh.addEventListener("touchend", (event) => {
+bHigh.addEventListener("touchend", () => {
   white(event);
 });
 
 // This part is for black keys
-const blackOne = document.querySelector("#black-key-one");
-blackOne.addEventListener("touchstart", (event) => {
+
+blackOne.addEventListener("touchstart", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackOne.addEventListener("touchend", (event) => {
+blackOne.addEventListener("touchend", () => {
   black(event);
 });
 
-const blackTwo = document.querySelector("#black-key-two");
-blackTwo.addEventListener("touchstart", (event) => {
+blackTwo.addEventListener("touchstart", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackTwo.addEventListener("touchend", (event) => {
+blackTwo.addEventListener("touchend", () => {
   black(event);
 });
 
-const blackThree = document.querySelector("#black-key-three");
-blackThree.addEventListener("touchstart", (event) => {
+blackThree.addEventListener("touchstart", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackThree.addEventListener("touchend", (event) => {
+blackThree.addEventListener("touchend", () => {
   black(event);
 });
 
-const blackFour = document.querySelector("#black-key-four");
-blackFour.addEventListener("touchstart", (event) => {
+blackFour.addEventListener("touchstart", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackFour.addEventListener("touchend", (event) => {
+blackFour.addEventListener("touchend", () => {
   black(event);
 });
 
-const blackFive = document.querySelector("#black-key-five");
-blackFive.addEventListener("touchstart", (event) => {
+blackFive.addEventListener("touchstart", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackFive.addEventListener("touchend", (event) => {
+blackFive.addEventListener("touchend", () => {
   black(event);
 });
 
-const blackSix = document.querySelector("#black-key-six");
-blackSix.addEventListener("touchstart", (event) => {
+blackSix.addEventListener("touchstart", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackSix.addEventListener("touchend", (event) => {
+blackSix.addEventListener("touchend", () => {
   black(event);
 });
 
-const blackSeven = document.querySelector("#black-key-seven");
-blackSeven.addEventListener("touchstart", (event) => {
+blackSeven.addEventListener("touchstart", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackSeven.addEventListener("touchend", (event) => {
+blackSeven.addEventListener("touchend", () => {
   black(event);
 });
 
-const blackEight = document.querySelector("#black-key-eight");
-blackEight.addEventListener("touchstart", (event) => {
+blackEight.addEventListener("touchstart", () => {
   silver(event);
   event.target.style.borderColor = "silver";
 });
-blackEight.addEventListener("touchend", (event) => {
+blackEight.addEventListener("touchend", () => {
   black(event);
 });
+
+activate(event.type);
