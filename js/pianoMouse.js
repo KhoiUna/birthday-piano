@@ -36,81 +36,101 @@ f.addEventListener("mouseup", () => {
 const g = document.querySelector("#g");
 g.addEventListener("mousedown", () => {
   silver(event);
+  gNote.play();
 });
 g.addEventListener("mouseup", () => {
   white(event);
+  gNote.pause();
 });
 
 const a = document.querySelector("#a");
 a.addEventListener("mousedown", () => {
   silver(event);
+  aNote.play();
 });
 a.addEventListener("mouseup", () => {
   white(event);
+  aNote.pause();
 });
 
 const b = document.querySelector("#b");
 b.addEventListener("mousedown", () => {
   silver(event);
+  bNote.play();
 });
 b.addEventListener("mouseup", () => {
   white(event);
+  bNote.pause();
 });
 
 const c = document.querySelector("#c");
 c.addEventListener("mousedown", () => {
   silver(event);
+  cNote.play();
 });
 c.addEventListener("mouseup", () => {
   white(event);
+  cNote.pause();
 });
 
 const d = document.querySelector("#d");
 d.addEventListener("mousedown", () => {
   silver(event);
+  dNote.play();
 });
 d.addEventListener("mouseup", () => {
   white(event);
+  dNote.pause();
 });
 
 const e = document.querySelector("#e");
 e.addEventListener("mousedown", () => {
   silver(event);
+  eNote.play();
 });
 e.addEventListener("mouseup", () => {
   white(event);
+  eNote.pause();
 });
 
 const fHigh = document.querySelector("#f-high");
 fHigh.addEventListener("mousedown", () => {
   silver(event);
+  fHighNote.play();
 });
 fHigh.addEventListener("mouseup", () => {
   white(event);
+  fHighNote.pause();
 });
 
 const gHigh = document.querySelector("#g-high");
 gHigh.addEventListener("mousedown", () => {
   silver(event);
+  gHighNote.play();
 });
 gHigh.addEventListener("mouseup", () => {
   white(event);
+  gHighNote.pause();
 });
 
 const aHigh = document.querySelector("#a-high");
 aHigh.addEventListener("mousedown", () => {
   silver(event);
+  aHighNote.play();
 });
 aHigh.addEventListener("mouseup", () => {
   white(event);
+  aHighNote.pause();
 });
 
 const bHigh = document.querySelector("#b-high");
 bHigh.addEventListener("mousedown", () => {
   silver(event);
+  bHighNote.play();
 });
 bHigh.addEventListener("mouseup", () => {
   white(event);
+  bHighNote.pause();
 });
 
 // This part is for black keys
