@@ -15,8 +15,16 @@ const playButton = document.querySelector("#play");
 const warning = document.querySelector("#warning");
 
 //Function to check input name
+//Check if input field is empty
+const checkEmpty = () => {
+  let name = document.getElementById("player-name").value;
+  if (name.length === 0 || name.trim() === "") {
+    return false;
+  }
+};
+//Check if name is valid
 const checkName = () => {
-  const alphabet = "qwertyuiopasdfghjklzxcvbnm";
+  const alphabet = "qwertyuiopasdfghjklzxcvbnmăâđêô ";
   let arr = [];
   let name = document.getElementById("player-name").value;
   name = name.toLowerCase();
@@ -33,21 +41,7 @@ const checkName = () => {
       return false;
     }
   }
-  return true;
-};
-
-const checkEmpty = () => {
-  let name = document.getElementById("player-name").value;
-  if (name.length === 0) {
-    return false;
-  }
-};
-
-//Function to get player name
-const showName = () => {
-  let name = document.getElementById("player-name").value;
-  document.getElementById("name").innerHTML =
-    "WISH " + name.toUpperCase() + " THE BEST WISHES!";
+  return (goodName = name.toUpperCase());
 };
 
 //Body backgroundColor theme
@@ -107,7 +101,8 @@ $(function () {
   });
 
   $("#next").click(() => {
-    showName();
+    document.getElementById("name").innerHTML =
+      "WISH " + goodName + " THE BEST WISHES!";
     $("#intro-name").hide("slow");
     $("#intro-instruction").show("slow");
   });
