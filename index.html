@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Keywords"
+      content="birthday piano, khoi, una, khoi una, piano"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap"
       rel="stylesheet"
@@ -10,13 +14,13 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/lyric.css" />
     <link rel="icon" href="./img/favicon.ico" />
-    <title>Piano</title>
+    <title>Birthday Piano</title>
   </head>
   <body>
     <header>
       <div class="head-container">
         <marquee>
-          <h3>PIANO IS FUN</h3>
+          <h3><em>HAPPY BIRTHDAY</em></h3>
           <h3 id="name"></h3>
         </marquee>
       </div>
@@ -24,7 +28,7 @@
     <main>
       <!-- This part is for avatar picture -->
       <div class="avatar">
-        <img id="avatar" src="./img/avatar.jpg" width="150px" />
+        <img id="avatar" src="./img/avatar.jpg" width="160px" />
       </div>
       <!-- This part is for piano -->
       <div class="piano-container">
@@ -180,15 +184,18 @@
         <!-- This is intro-name -->
         <div id="intro-name">
           <h5>Hi! What's your name ?</h5>
-          <input id="player-name" /><br />
+          <input id="player-name" /><button id="submit"><h5>Submit</h5></button
+          ><br />
+          <p id="warning" style="font-style: italic; font-size: 12px;"></p>
           <button
             id="next"
             style="
               border: 2px black solid;
               border-radius: 5px;
-              background-color: pink;
               cursor: pointer;
+              padding: 1% 1%;
             "
+            disabled
           >
             <strong>NEXT</strong>
           </button>
@@ -206,7 +213,6 @@
             style="
               border: 2px black solid;
               border-radius: 5px;
-              background-color: pink;
               padding: 1% 1%;
               cursor: pointer;
             "
@@ -233,6 +239,7 @@
     ></script>
     <script type="text/javascript" src="./js/piano.js"></script>
     <script type="text/javascript" src="./js/sound.js"></script>
+    <script type="text/javascript" src="./js/intro.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
