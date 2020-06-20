@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/lyric.css" />
     <link rel="icon" href="./img/favicon.ico" />
-    <title>Piano</title>
+    <title>Birthday Piano</title>
   </head>
   <body>
     <header>
       <div class="head-container">
         <marquee>
-          <h3><em>Jun 18 Piano</em></h3>
+          <h3><em>HAPPY BIRTHDAY</em></h3>
           <h3 id="name"></h3>
         </marquee>
       </div>
@@ -63,7 +63,7 @@
         </div>
       </div>
 
-      <h3>LYRIC:</h3>
+      <h3 class="lyric-title">LYRIC:</h3>
 
       <!-- This part is for lyric -->
       <div class="lyric-grid-container">
@@ -189,8 +189,9 @@
         <!-- This is intro-name -->
         <div id="intro-name">
           <h5>Hi! What's your name ?</h5>
-          <input id="player-name" /><button id="submit"><h5>Submit</h5></button
-          ><br />
+          <input id="player-name" />
+          <input id="submit" value="Submit" type="button" />
+          <br />
           <p id="warning" style="font-style: italic; font-size: 12px;"></p>
           <button
             id="next"
@@ -209,8 +210,9 @@
         <!-- This is intro-instruction -->
         <div id="intro-instruction" style="display: none;">
           <h5>
-            <span style="color: red;">TOUCH & HOLD</span> the red piano key to
-            follow the melody. <br />There is a
+            <span style="color: red;">TOUCH & HOLD</span> the
+            <span style="font-weight: bold; color: rgb(240, 80, 80);">red</span>
+            piano key to follow the melody. <br />There is a
             <span style="background-color: yellow;">surprise</span> at the end!
           </h5>
           <button
@@ -224,6 +226,20 @@
           >
             <strong>PLAY</strong>
           </button>
+        </div>
+      </div>
+
+      <!-- This part is to generate a random quote -->
+      <div class="quote-container">
+        <div id="quote-title">
+          CLICK THE BOX FOR A
+          <span style="background-color: yellow;">POSITIVE</span> QUOTE!
+        </div>
+        <div class="quote-box" style="margin-top: 5%;">
+          <div id="gift">
+            <img src="./img/gift.jpg" alt="Gift" width="120px" />
+          </div>
+          <div id="author"></div>
         </div>
       </div>
     </main>
@@ -242,9 +258,9 @@
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     ></script>
-    <script type="text/javascript" src="./js/piano.js"></script>
-    <script type="text/javascript" src="./js/sound.js"></script>
     <script type="text/javascript" src="./js/intro.js"></script>
-    <!-- <script type="text/javascript" src="./js/main.js"></script> -->
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/sound.js"></script>
+    <script type="text/javascript" src="./js/piano.js"></script>
   </body>
 </html>
