@@ -24,18 +24,18 @@ const checkEmpty = () => {
 };
 //Check if name is valid
 const checkName = () => {
-  const alphabet = "qwertyuiopasdfghjklzxcvbnmăâđêô ";
-  let arr = [];
+  const symbol = "`~0123456789!@#$%^&*()-_=+{}|[]:;'<>,./?";
+  let arr = ['"'];
   let name = document.getElementById("player-name").value;
   name = name.toLowerCase();
 
-  for (let i = 0; i < alphabet.length; i++) {
-    arr.push(alphabet[i]);
+  for (let i = 0; i < symbol.length; i++) {
+    arr.push(symbol[i]);
   }
 
   let letter = 0;
   while (letter < name.length) {
-    if (arr.includes(name[letter])) {
+    if (!arr.includes(name[letter])) {
       letter++;
     } else {
       return false;
@@ -46,8 +46,8 @@ const checkName = () => {
 
 //Body backgroundColor theme
 const color = ["#ff81d5", "yellow", "orange", "aquamarine", "rgb(82, 241, 42)"];
-const randomTheme = () => {
-  const choice = Math.floor(Math.random() * color.length);
+const randomTheme = (colorArr) => {
+  const choice = Math.floor(Math.random() * colorArr.length);
   document.body.style.backgroundColor = color[choice];
   switch (color[choice]) {
     case "#ff81d5": //pink
@@ -80,7 +80,9 @@ const randomTheme = () => {
 
 //Add function to button:
 $(function () {
-  randomTheme();
+  randomTheme(color);
+  document.querySelector(".piano-container").style.visibility = "hidden";
+  document.querySelector(".lyric-title").style.visibility = "hidden";
 
   $("#submit").click(() => {
     if (checkEmpty() === false) {
@@ -112,5 +114,7 @@ $(function () {
     headContainer.style.visibility = "visible";
     avatar.style.visibility = "visible";
     lyric.style.visibility = "visible";
+    document.querySelector(".piano-container").style.visibility = "visible";
+    document.querySelector(".lyric-title").style.visibility = "visible";
   });
 });
