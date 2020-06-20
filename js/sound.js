@@ -151,23 +151,14 @@ const bHighNote = {
     bHighSound.pause();
   },
 };
+///
 
-/////
-
-/////
-
-/////
-/////
-
-/////
-/////
-
-/////
-/////
-
-/////
-/////
-
-/////
-
+///
 //This sound is for black keys
+
+//Cheering sound for end of game
+const cheering = new Audio("sound/cheering.mp3");
+const cheerSound = () => {
+  cheering.volume = 1;
+  cheering.play();
+};
