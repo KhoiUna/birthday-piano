@@ -1,3 +1,10 @@
+//Tracking variables
+let firstTracker = 1;
+let secondTracker = 7;
+let thirdTracker = 13;
+let fourthTracker = 21;
+
+//Chang keyboard's color functions
 const silver = (event) => {
   event.target.style.backgroundColor = "silver";
 };
@@ -13,7 +20,6 @@ const black = (event) => {
 };
 
 //This part is for mouse events:
-
 // This part is for white keys
 const f = document.querySelector("#f");
 f.addEventListener("pointerdown", () => {
@@ -29,16 +35,62 @@ const g = document.querySelector("#g");
 g.addEventListener("pointerdown", () => {
   silver(event);
   gNote.play();
+  if (firstTracker === 1 || firstTracker === 2 || firstTracker === 4) {
+    trackerOne();
+    firstTracker++;
+  }
+  if (firstTracker === 7) {
+    if (secondTracker === 7 || secondTracker === 8 || secondTracker === 10) {
+      trackerTwo();
+      secondTracker++;
+    }
+  }
+  if (secondTracker === 13) {
+    if (thirdTracker === 13 || thirdTracker === 14) {
+      trackerThree();
+      thirdTracker++;
+    }
+  }
 });
 g.addEventListener("pointerup", () => {
   white(event);
   gNote.pause();
+
+  if (firstTracker === 2) {
+    g.style.backgroundColor = "rgb(240, 80, 80)";
+  }
+  if (firstTracker === 7) {
+    if (secondTracker === 8) {
+      g.style.backgroundColor = "rgb(240, 80, 80)";
+    }
+  }
+  if (secondTracker === 13) {
+    if (thirdTracker === 14) {
+      g.style.backgroundColor = "rgb(240, 80, 80)";
+    }
+  }
 });
 
 const a = document.querySelector("#a");
 a.addEventListener("pointerdown", () => {
   silver(event);
   aNote.play();
+  if (firstTracker === 3) {
+    trackerOne();
+    firstTracker++;
+  }
+  if (firstTracker === 7) {
+    if (secondTracker === 9) {
+      trackerTwo();
+      secondTracker++;
+    }
+  }
+  if (secondTracker === 13) {
+    if (thirdTracker === 20) {
+      trackerThree();
+      thirdTracker++;
+    }
+  }
 });
 a.addEventListener("pointerup", () => {
   white(event);
@@ -49,6 +101,16 @@ const b = document.querySelector("#b");
 b.addEventListener("pointerdown", () => {
   silver(event);
   bNote.play();
+  if (firstTracker === 6) {
+    trackerOne();
+    firstTracker++;
+  }
+  if (secondTracker === 13) {
+    if (thirdTracker === 19) {
+      trackerThree();
+      thirdTracker++;
+    }
+  }
 });
 b.addEventListener("pointerup", () => {
   white(event);
@@ -59,16 +121,55 @@ const c = document.querySelector("#c");
 c.addEventListener("pointerdown", () => {
   silver(event);
   cNote.play();
+  if (firstTracker === 5) {
+    trackerOne();
+    firstTracker++;
+  }
+  if (firstTracker === 7) {
+    if (secondTracker === 12) {
+      trackerTwo();
+      secondTracker++;
+    }
+  }
+  if (secondTracker === 13) {
+    if (thirdTracker === 17 || thirdTracker === 18) {
+      trackerThree();
+      thirdTracker++;
+    }
+  }
+  if (thirdTracker === 21) {
+    if (fourthTracker === 24 || fourthTracker === 26) {
+      trackerFour();
+      fourthTracker++;
+    }
+  }
 });
 c.addEventListener("pointerup", () => {
   white(event);
   cNote.pause();
+  if (secondTracker === 13) {
+    if (thirdTracker === 18) {
+      c.style.backgroundColor = "rgb(240, 80, 80)";
+    }
+  }
 });
 
 const d = document.querySelector("#d");
 d.addEventListener("pointerdown", () => {
   silver(event);
   dNote.play();
+  if (firstTracker === 7) {
+    if (secondTracker === 11) {
+      trackerTwo();
+      secondTracker++;
+    }
+  }
+  if (thirdTracker === 21) {
+    if (fourthTracker === 25) {
+      trackerFour();
+      fourthTracker++;
+    }
+  }
 });
 d.addEventListener("pointerup", () => {
   white(event);
@@ -79,6 +180,16 @@ const e = document.querySelector("#e");
 e.addEventListener("pointerdown", () => {
   silver(event);
   eNote.play();
+  if (thirdTracker === 16) {
+    trackerThree();
+    thirdTracker++;
+  }
+  if (thirdTracker === 21) {
+    if (fourthTracker === 23) {
+      trackerFour();
+      fourthTracker++;
+    }
+  }
 });
 e.addEventListener("pointerup", () => {
   white(event);
@@ -89,16 +200,33 @@ const fHigh = document.querySelector("#f-high");
 fHigh.addEventListener("pointerdown", () => {
   silver(event);
   fHighNote.play();
+  if (thirdTracker === 21) {
+    if (fourthTracker === 21 || fourthTracker === 22) {
+      trackerFour();
+      fourthTracker++;
+    }
+  }
 });
 fHigh.addEventListener("pointerup", () => {
   white(event);
   fHighNote.pause();
+  if (thirdTracker === 21) {
+    if (fourthTracker === 22) {
+      fHigh.style.backgroundColor = "rgb(240, 80, 80)";
+    }
+  }
 });
 
 const gHigh = document.querySelector("#g-high");
 gHigh.addEventListener("pointerdown", () => {
   silver(event);
   gHighNote.play();
+  if (secondTracker === 13) {
+    if (thirdTracker === 15) {
+      trackerThree();
+      thirdTracker++;
+    }
+  }
 });
 gHigh.addEventListener("pointerup", () => {
   white(event);
