@@ -252,76 +252,96 @@ bHigh.addEventListener("pointerup", () => {
   white(event);
   bHighNote.pause();
 });
+///
+///
 
+///
+///
 // This part is for black keys
 const blackOne = document.querySelector("#black-key-one");
 blackOne.addEventListener("pointerdown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
+  fSharpNote.play();
 });
 blackOne.addEventListener("pointerup", () => {
   black(event);
+  fSharpNote.pause();
 });
 
 const blackTwo = document.querySelector("#black-key-two");
 blackTwo.addEventListener("pointerdown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
+  gSharpNote.play();
 });
 blackTwo.addEventListener("pointerup", () => {
   black(event);
+  gSharpNote.pause();
 });
 
 const blackThree = document.querySelector("#black-key-three");
 blackThree.addEventListener("pointerdown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
+  aSharpNote.play();
 });
 blackThree.addEventListener("pointerup", () => {
   black(event);
+  aSharpNote.pause();
 });
 
 const blackFour = document.querySelector("#black-key-four");
 blackFour.addEventListener("pointerdown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
+  cSharpNote.play();
 });
 blackFour.addEventListener("pointerup", () => {
   black(event);
+  cSharpNote.pause();
 });
 
 const blackFive = document.querySelector("#black-key-five");
 blackFive.addEventListener("pointerdown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
+  dSharpNote.play();
 });
 blackFive.addEventListener("pointerup", () => {
   black(event);
+  dSharpNote.pause();
 });
 
 const blackSix = document.querySelector("#black-key-six");
 blackSix.addEventListener("pointerdown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
+  fHighSharpNote.play();
 });
 blackSix.addEventListener("pointerup", () => {
   black(event);
+  fHighSharpNote.pause();
 });
 
 const blackSeven = document.querySelector("#black-key-seven");
 blackSeven.addEventListener("pointerdown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
+  gHighSharpNote.play();
 });
 blackSeven.addEventListener("pointerup", () => {
   black(event);
+  gHighSharpNote.pause();
 });
 
 const blackEight = document.querySelector("#black-key-eight");
 blackEight.addEventListener("pointerdown", () => {
   silver(event);
   event.target.style.borderColor = "silver";
+  aHighSharpNote.play();
 });
 blackEight.addEventListener("pointerup", () => {
   black(event);
+  aHighSharpNote.pause();
 });
