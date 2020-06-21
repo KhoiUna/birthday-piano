@@ -37,7 +37,7 @@ const quoteArr = [
   "Optimism is the faith that leads to achievement.",
   "Done is better than perfect.",
   "Spread love everywhere you go. Let no one ever come to you without leaving happier.",
-  "Have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.",
+  "Innovation distinguishes between a leader and a follower.",
 ];
 const quoteGenerator = () => {
   let finalArr = [];
