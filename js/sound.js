@@ -153,8 +153,118 @@ const bHighNote = {
 };
 ///
 
-///
 //This sound is for black keys
+/////
+const fSharp = new Audio("sound/Fsharp.m4a");
+const fSharpNote = {
+  play() {
+    fSharp.load();
+    fSharp.play();
+    fSharp.volume = 1;
+  },
+  pause() {
+    fSharp.pause();
+  },
+};
+///
+
+/////
+const gSharp = new Audio("sound/Gsharp.m4a");
+const gSharpNote = {
+  play() {
+    gSharp.load();
+    gSharp.play();
+    gSharp.volume = 1;
+  },
+  pause() {
+    gSharp.pause();
+  },
+};
+///
+
+/////
+const aSharp = new Audio("sound/Asharp.m4a");
+const aSharpNote = {
+  play() {
+    aSharp.load();
+    aSharp.play();
+    aSharp.volume = 1;
+  },
+  pause() {
+    aSharp.pause();
+  },
+};
+///
+
+/////
+const cSharp = new Audio("sound/Csharp.m4a");
+const cSharpNote = {
+  play() {
+    cSharp.load();
+    cSharp.play();
+    cSharp.volume = 1;
+  },
+  pause() {
+    cSharp.pause();
+  },
+};
+///
+
+/////
+const dSharp = new Audio("sound/Dsharp.m4a");
+const dSharpNote = {
+  play() {
+    dSharp.load();
+    dSharp.play();
+    dSharp.volume = 1;
+  },
+  pause() {
+    dSharp.pause();
+  },
+};
+///
+
+/////
+const fHighSharp = new Audio("sound/Fsharphigh.m4a");
+const fHighSharpNote = {
+  play() {
+    fHighSharp.load();
+    fHighSharp.play();
+    fHighSharp.volume = 1;
+  },
+  pause() {
+    fHighSharp.pause();
+  },
+};
+///
+
+/////
+const gHighSharp = new Audio("sound/Gsharphigh.m4a");
+const gHighSharpNote = {
+  play() {
+    gHighSharp.load();
+    gHighSharp.play();
+    gHighSharp.volume = 1;
+  },
+  pause() {
+    gHighSharp.pause();
+  },
+};
+///
+
+/////
+const aHighSharp = new Audio("sound/Bhigh.m4a");
+const aHighSharpNote = {
+  play() {
+    aHighSharp.load();
+    aHighSharp.play();
+    aHighSharp.volume = 1;
+  },
+  pause() {
+    aHighSharp.pause();
+  },
+};
+///
 
 //Cheering sound for end of game
 const cheering = new Audio("sound/cheering.mp3");
