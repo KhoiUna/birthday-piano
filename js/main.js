@@ -384,14 +384,42 @@ const trackerFour = () => {
 
 //JQuery to generate a quote
 $(function () {
-  $("#gift").click(() => {
-    const finalArr = quoteGenerator();
-    document.querySelector("#gift").innerHTML = `" ${finalArr[0]} "`;
-    document.querySelector("#author").innerHTML = `- ${finalArr[1]} -`;
-    document.querySelector(".quote-container").style.backgroundColor =
-      "rgb(255, 255, 154)";
-    document.querySelector(".quote-box").style.backgroundColor = "yellow";
-    document.querySelector("#quote-title").innerHTML =
-      "ONCE MORE, HAPPY BIRTHDAY!";
-  });
+  const currentDate = new Date();
+  const month = currentDate.getMonth();
+  const date = currentDate.getDate();
+
+  if (month === 6 && date === 7) {
+    $("#gift").click(() => {
+      document.querySelector("#gift").innerHTML =
+        "'This link is magical!'<br>-Khoi-";
+      document.querySelector("#author").innerHTML =
+        "<a href='https://www.dell.com/en-us/shop/dell-laptops/new-inspiron-15-7000-laptop/spd/inspiron-15-7591-laptop?gacd=9694607-24082147-5744497-272708580-132331255&dgc=&dclid=CLScyOLXk-oCFYPClAkd-VECUQ' target='_blank'>Click this link to see your present!</a>";
+      document.querySelector(".quote-container").style.backgroundColor =
+        "rgb(255, 255, 154)";
+      document.querySelector(".quote-box").style.backgroundColor = "yellow";
+      document.querySelector("#quote-title").innerHTML = "Your quote";
+    });
+  } else if (month === 6 && date === 17) {
+    $("#gift").click(() => {
+      document.querySelector("#gift").innerHTML =
+        "Chúc mẹ sinh nhật vui vẻ, mạnh khỏe và hạnh phúc. Cảm ơn mẹ đã chăm lo cho con!";
+      document.querySelector("#author").innerHTML = "-Nguyễn Tuấn Khôi-";
+      document.querySelector(".quote-container").style.backgroundColor =
+        "rgb(255, 255, 154)";
+      document.querySelector(".quote-box").style.backgroundColor = "yellow";
+      document.querySelector("#quote-title").innerHTML =
+        "CHÚC MỪNG SINH NHẬT MẸ!";
+    });
+  } else {
+    $("#gift").click(() => {
+      const finalArr = quoteGenerator();
+      document.querySelector("#gift").innerHTML = `" ${finalArr[0]} "`;
+      document.querySelector("#author").innerHTML = `- ${finalArr[1]} -`;
+      document.querySelector(".quote-container").style.backgroundColor =
+        "rgb(255, 255, 154)";
+      document.querySelector(".quote-box").style.backgroundColor = "yellow";
+      document.querySelector("#quote-title").innerHTML =
+        "ONCE MORE, HAPPY BIRTHDAY!";
+    });
+  }
 });
