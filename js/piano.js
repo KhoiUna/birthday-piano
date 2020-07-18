@@ -4,14 +4,22 @@ let secondTracker = 7;
 let thirdTracker = 13;
 let fourthTracker = 21;
 
-//Chang keyboard's color functions
+//Change keyboard's color functions
 const silver = (event) => {
   event.target.style.backgroundColor = "silver";
+  if (event.target.tagName === "P") {
+    let key = event.target.parentNode.id;
+    document.querySelector(`#${key}`).style.backgroundColor = "silver";
+  }
 };
 
 const white = (event) => {
   event.target.style.backgroundColor = "white";
   event.target.style.borderColor = "black";
+  if (event.target.tagName === "P") {
+    let key = event.target.parentNode.id;
+    document.querySelector(`#${key}`).style.backgroundColor = "white";
+  }
 };
 
 const black = (event) => {
