@@ -1,3 +1,3 @@
 # Birthday Piano
 
-- Send a birthday song to your friends
+- The app to send a birthday song and a wish to your friends
