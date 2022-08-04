@@ -12,10 +12,10 @@ html {
 .head-container {
   border: 3px dashed black;
   background-color: #fff;
+  padding: 0.5rem;
 }
 
 .head-container h3 {
-  padding: 1% 0%;
   text-align: center;
   font-size: 22px;
 }
