@@ -19,3 +19,11 @@ document.querySelector(
 document.querySelector(
   ".lyric-grid-four .lyric-box-one"
 ).style.backgroundColor = red;
+
+// Randomize body background color
+const color = ["#ff81d5", "yellow", "orange", "aquamarine", "rgb(82, 241, 42)"];
+const randomTheme = (colorArr) => {
+  const choice = Math.floor(Math.random() * colorArr.length);
+  document.body.style.backgroundColor = color[choice];
+};
+randomTheme(color);
