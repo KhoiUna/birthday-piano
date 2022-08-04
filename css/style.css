@@ -33,6 +33,9 @@ html {
 /*This part is for piano*/
 .piano-container {
   padding-bottom: 5%;
+  /* Disabling copy */
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .piano {
