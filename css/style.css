@@ -234,6 +234,7 @@ html {
   padding: 2% 2%;
   font-weight: bold;
   display: none;
+  border-radius: 10px;
 }
 
 #gift {
