@@ -1,7 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
+  jquery: ^3.6.0
   vite: ^3.0.0
+
+dependencies:
+  jquery: 3.6.0
 
 devDependencies:
   vite: 3.0.4
@@ -250,6 +254,10 @@ packages:
     dependencies:
       has: 1.0.3
     dev: true
+
+  /jquery/3.6.0:
+    resolution: {integrity: sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==}
+    dev: false
 
   /nanoid/3.3.4:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
