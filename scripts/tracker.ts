@@ -1,9 +1,10 @@
 import $ from "jquery";
-import { red } from "./global";
+import { lightYellow, red } from "./global";
 import Quote from "./utils/Quote";
 
-export const trackerFunction = (tracker) => {
-  let correctKey = false;
+// This function tracks the progress of the user
+export const trackerFunction = (tracker: number) => {
+  let correctKey = false; // Set to true if user presses the key matched with the lyric
   //
   //
   // 1st slide
@@ -396,7 +397,7 @@ export const trackerFunction = (tracker) => {
 
       document.querySelector<HTMLDivElement>(
         ".quote-container"
-      ).style.backgroundColor = "rgb(255, 255, 154)";
+      ).style.backgroundColor = lightYellow;
 
       document.querySelector<HTMLDivElement>(
         ".quote-box"
