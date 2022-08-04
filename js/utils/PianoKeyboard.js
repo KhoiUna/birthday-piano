@@ -75,6 +75,13 @@ export default class PianoKeyboard {
 
   //Change keyboard's color functions
   static press(event) {
+    const key = event.target.id;
+
+    // If the key is one of the black keys, becasue black keys have longer id names
+    if (key.length > 6) {
+      event.target.style.borderColor = "silver";
+    }
+
     event.target.style.backgroundColor = "silver";
     this.play(event);
   }
