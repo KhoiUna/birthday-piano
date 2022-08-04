@@ -1,5 +1,5 @@
 export default class Quote {
-  quoteArray = [
+  static quoteArray = [
     {
       author: "Mark Twain",
       quote: "The secret of getting ahead is getting started.",
