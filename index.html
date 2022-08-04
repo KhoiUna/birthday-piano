@@ -14,9 +14,10 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/lyric.css" />
-    <link rel="icon" href="./img/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" />
     <title>Birthday Piano</title>
   </head>
+
   <body>
     <header>
       <div class="head-container">
@@ -186,51 +187,6 @@
         </div>
       </div>
 
-      <!-- This part is for introduction pop-up screen -->
-      <div class="intro-popup">
-        <!-- This is intro-name -->
-        <div id="intro-name">
-          <h5>Hi! What's your name ?</h5>
-          <input id="player-name" />
-          <input id="submit" value="Submit" type="button" />
-          <br />
-          <p id="warning" style="font-style: italic; font-size: 12px"></p>
-          <button
-            id="next"
-            style="
-              border: 2px black solid;
-              border-radius: 5px;
-              cursor: pointer;
-              padding: 1% 1%;
-            "
-            disabled
-          >
-            <strong>NEXT</strong>
-          </button>
-        </div>
-
-        <!-- This is intro-instruction -->
-        <div id="intro-instruction" style="display: none">
-          <h5>
-            <span style="color: red">TOUCH & HOLD</span> the
-            <span style="font-weight: bold; color: rgb(240, 80, 80)">red</span>
-            piano key to follow the melody. <br />There is a
-            <span style="background-color: yellow">surprise</span> at the end!
-          </h5>
-          <button
-            id="play"
-            style="
-              border: 2px black solid;
-              border-radius: 5px;
-              padding: 1% 1%;
-              cursor: pointer;
-            "
-          >
-            <strong>PLAY</strong>
-          </button>
-        </div>
-      </div>
-
       <!-- This part is to generate a random quote -->
       <div class="quote-container">
         <div id="quote-title">
@@ -263,9 +219,7 @@
       </p>
     </footer>
 
-    <script type="module" src="./js/intro.js"></script>
-    <script type="module" src="./js/main.js"></script>
-    <script type="module" src="./js/sound.js"></script>
-    <script type="module" src="./js/piano.js"></script>
+    <script type="module" src="./js/initialState.js"></script>
+    <script type="module" src="./js/play.js"></script>
   </body>
 </html>
