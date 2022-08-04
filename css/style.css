@@ -11,6 +11,7 @@ html {
 
 .head-container {
   border: 3px dashed black;
+  background-color: #fff;
 }
 
 .head-container h3 {
