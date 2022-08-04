@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 //Hide .head-container
 const headContainer = document.querySelector(".head-container");
 headContainer.style.visibility = "hidden";
@@ -41,7 +43,7 @@ const checkName = () => {
       return false;
     }
   }
-  return (goodName = name.toUpperCase());
+  return name.toUpperCase();
 };
 
 //Body backgroundColor theme
@@ -84,13 +86,15 @@ $(function () {
   document.querySelector(".piano-container").style.visibility = "hidden";
   document.querySelector(".lyric-title").style.visibility = "hidden";
 
-  $("#submit").click(() => {
+  let goodName;
+  $("#submit").on("click", () => {
     if (checkEmpty() === false) {
       warning.style.color = "red";
       warning.innerHTML = "*Please enter your name";
       nextButton.disabled = true;
     } else {
-      if (checkName()) {
+      goodName = checkName();
+      if (goodName) {
         warning.style.color = "rgb(82, 241, 42)";
         warning.innerHTML = "That's a beautiful name!";
         nextButton.disabled = false;
@@ -102,14 +106,14 @@ $(function () {
     }
   });
 
-  $("#next").click(() => {
+  $("#next").on("click", () => {
     document.getElementById("name").innerHTML =
       "WISH " + goodName + " THE BEST WISHES!";
     $("#intro-name").hide("slow");
     $("#intro-instruction").show("slow");
   });
 
-  $("#play").click(() => {
+  $("#play").on("click", () => {
     $(".intro-popup").fadeOut("slow");
     headContainer.style.visibility = "visible";
     avatar.style.visibility = "visible";

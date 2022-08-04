@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 //Initial
 //Slide One
 document.querySelector(".lyric-grid-one .lyric-box-one").style.backgroundColor =

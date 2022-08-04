@@ -27,20 +27,20 @@ const black = (event) => {
   event.target.style.borderColor = "black";
 };
 
-//This part is for mouse events:
+//This part is for mouse events
 // This part is for white keys
 const f = document.querySelector("#f");
-f.addEventListener("pointerdown", () => {
+f.addEventListener("pointerdown", (event) => {
   silver(event);
   fNote.play();
 });
-f.addEventListener("pointerup", () => {
+f.addEventListener("pointerup", (event) => {
   white(event);
   fNote.pause();
 });
 
 const g = document.querySelector("#g");
-g.addEventListener("pointerdown", () => {
+g.addEventListener("pointerdown", (event) => {
   silver(event);
   gNote.play();
   if (firstTracker === 1 || firstTracker === 2 || firstTracker === 4) {
@@ -60,7 +60,7 @@ g.addEventListener("pointerdown", () => {
     }
   }
 });
-g.addEventListener("pointerup", () => {
+g.addEventListener("pointerup", (event) => {
   white(event);
   gNote.pause();
 
@@ -80,7 +80,7 @@ g.addEventListener("pointerup", () => {
 });
 
 const a = document.querySelector("#a");
-a.addEventListener("pointerdown", () => {
+a.addEventListener("pointerdown", (event) => {
   silver(event);
   aNote.play();
   if (firstTracker === 3) {
@@ -100,13 +100,13 @@ a.addEventListener("pointerdown", () => {
     }
   }
 });
-a.addEventListener("pointerup", () => {
+a.addEventListener("pointerup", (event) => {
   white(event);
   aNote.pause();
 });
 
 const b = document.querySelector("#b");
-b.addEventListener("pointerdown", () => {
+b.addEventListener("pointerdown", (event) => {
   silver(event);
   bNote.play();
   if (firstTracker === 6) {
@@ -120,13 +120,13 @@ b.addEventListener("pointerdown", () => {
     }
   }
 });
-b.addEventListener("pointerup", () => {
+b.addEventListener("pointerup", (event) => {
   white(event);
   bNote.pause();
 });
 
 const c = document.querySelector("#c");
-c.addEventListener("pointerdown", () => {
+c.addEventListener("pointerdown", (event) => {
   silver(event);
   cNote.play();
   if (firstTracker === 5) {
@@ -152,7 +152,7 @@ c.addEventListener("pointerdown", () => {
     }
   }
 });
-c.addEventListener("pointerup", () => {
+c.addEventListener("pointerup", (event) => {
   white(event);
   cNote.pause();
   if (secondTracker === 13) {
@@ -163,7 +163,7 @@ c.addEventListener("pointerup", () => {
 });
 
 const d = document.querySelector("#d");
-d.addEventListener("pointerdown", () => {
+d.addEventListener("pointerdown", (event) => {
   silver(event);
   dNote.play();
   if (firstTracker === 7) {
@@ -179,13 +179,13 @@ d.addEventListener("pointerdown", () => {
     }
   }
 });
-d.addEventListener("pointerup", () => {
+d.addEventListener("pointerup", (event) => {
   white(event);
   dNote.pause();
 });
 
 const e = document.querySelector("#e");
-e.addEventListener("pointerdown", () => {
+e.addEventListener("pointerdown", (event) => {
   silver(event);
   eNote.play();
   if (thirdTracker === 16) {
@@ -199,13 +199,13 @@ e.addEventListener("pointerdown", () => {
     }
   }
 });
-e.addEventListener("pointerup", () => {
+e.addEventListener("pointerup", (event) => {
   white(event);
   eNote.pause();
 });
 
 const fHigh = document.querySelector("#f-high");
-fHigh.addEventListener("pointerdown", () => {
+fHigh.addEventListener("pointerdown", (event) => {
   silver(event);
   fHighNote.play();
   if (thirdTracker === 21) {
@@ -215,7 +215,7 @@ fHigh.addEventListener("pointerdown", () => {
     }
   }
 });
-fHigh.addEventListener("pointerup", () => {
+fHigh.addEventListener("pointerup", (event) => {
   white(event);
   fHighNote.pause();
   if (thirdTracker === 21) {
@@ -226,7 +226,7 @@ fHigh.addEventListener("pointerup", () => {
 });
 
 const gHigh = document.querySelector("#g-high");
-gHigh.addEventListener("pointerdown", () => {
+gHigh.addEventListener("pointerdown", (event) => {
   silver(event);
   gHighNote.play();
   if (secondTracker === 13) {
@@ -236,27 +236,27 @@ gHigh.addEventListener("pointerdown", () => {
     }
   }
 });
-gHigh.addEventListener("pointerup", () => {
+gHigh.addEventListener("pointerup", (event) => {
   white(event);
   gHighNote.pause();
 });
 
 const aHigh = document.querySelector("#a-high");
-aHigh.addEventListener("pointerdown", () => {
+aHigh.addEventListener("pointerdown", (event) => {
   silver(event);
   aHighNote.play();
 });
-aHigh.addEventListener("pointerup", () => {
+aHigh.addEventListener("pointerup", (event) => {
   white(event);
   aHighNote.pause();
 });
 
 const bHigh = document.querySelector("#b-high");
-bHigh.addEventListener("pointerdown", () => {
+bHigh.addEventListener("pointerdown", (event) => {
   silver(event);
   bHighNote.play();
 });
-bHigh.addEventListener("pointerup", () => {
+bHigh.addEventListener("pointerup", (event) => {
   white(event);
   bHighNote.pause();
 });
@@ -267,89 +267,89 @@ bHigh.addEventListener("pointerup", () => {
 ///
 // This part is for black keys
 const blackOne = document.querySelector("#black-key-one");
-blackOne.addEventListener("pointerdown", () => {
+blackOne.addEventListener("pointerdown", (event) => {
   silver(event);
   event.target.style.borderColor = "silver";
   fSharpNote.play();
 });
-blackOne.addEventListener("pointerup", () => {
+blackOne.addEventListener("pointerup", (event) => {
   black(event);
   fSharpNote.pause();
 });
 
 const blackTwo = document.querySelector("#black-key-two");
-blackTwo.addEventListener("pointerdown", () => {
+blackTwo.addEventListener("pointerdown", (event) => {
   silver(event);
   event.target.style.borderColor = "silver";
   gSharpNote.play();
 });
-blackTwo.addEventListener("pointerup", () => {
+blackTwo.addEventListener("pointerup", (event) => {
   black(event);
   gSharpNote.pause();
 });
 
 const blackThree = document.querySelector("#black-key-three");
-blackThree.addEventListener("pointerdown", () => {
+blackThree.addEventListener("pointerdown", (event) => {
   silver(event);
   event.target.style.borderColor = "silver";
   aSharpNote.play();
 });
-blackThree.addEventListener("pointerup", () => {
+blackThree.addEventListener("pointerup", (event) => {
   black(event);
   aSharpNote.pause();
 });
 
 const blackFour = document.querySelector("#black-key-four");
-blackFour.addEventListener("pointerdown", () => {
+blackFour.addEventListener("pointerdown", (event) => {
   silver(event);
   event.target.style.borderColor = "silver";
   cSharpNote.play();
 });
-blackFour.addEventListener("pointerup", () => {
+blackFour.addEventListener("pointerup", (event) => {
   black(event);
   cSharpNote.pause();
 });
 
 const blackFive = document.querySelector("#black-key-five");
-blackFive.addEventListener("pointerdown", () => {
+blackFive.addEventListener("pointerdown", (event) => {
   silver(event);
   event.target.style.borderColor = "silver";
   dSharpNote.play();
 });
-blackFive.addEventListener("pointerup", () => {
+blackFive.addEventListener("pointerup", (event) => {
   black(event);
   dSharpNote.pause();
 });
 
 const blackSix = document.querySelector("#black-key-six");
-blackSix.addEventListener("pointerdown", () => {
+blackSix.addEventListener("pointerdown", (event) => {
   silver(event);
   event.target.style.borderColor = "silver";
   fHighSharpNote.play();
 });
-blackSix.addEventListener("pointerup", () => {
+blackSix.addEventListener("pointerup", (event) => {
   black(event);
   fHighSharpNote.pause();
 });
 
 const blackSeven = document.querySelector("#black-key-seven");
-blackSeven.addEventListener("pointerdown", () => {
+blackSeven.addEventListener("pointerdown", (event) => {
   silver(event);
   event.target.style.borderColor = "silver";
   gHighSharpNote.play();
 });
-blackSeven.addEventListener("pointerup", () => {
+blackSeven.addEventListener("pointerup", (event) => {
   black(event);
   gHighSharpNote.pause();
 });
 
 const blackEight = document.querySelector("#black-key-eight");
-blackEight.addEventListener("pointerdown", () => {
+blackEight.addEventListener("pointerdown", (event) => {
   silver(event);
   event.target.style.borderColor = "silver";
   aHighSharpNote.play();
 });
-blackEight.addEventListener("pointerup", () => {
+blackEight.addEventListener("pointerup", (event) => {
   black(event);
   aHighSharpNote.pause();
 });
