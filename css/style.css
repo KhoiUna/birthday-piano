@@ -1,13 +1,4 @@
-* {
-  padding: 0;
-  margin: 0 auto;
-  font-family: "IBM Plex Sans", sans-serif;
-}
-
-html {
-  width: max-content;
-  text-align: center;
-}
+@import url("./global.css");
 
 .head-container {
   border: 3px dashed black;
@@ -246,14 +237,4 @@ html {
 
 #author {
   padding-top: 2%;
-}
-
-/*This part is for footer*/
-footer {
-  padding: 9rem 0 2rem 0;
-  text-align: center;
-  font-weight: bold;
-}
-footer a {
-  color: #000;
 }
