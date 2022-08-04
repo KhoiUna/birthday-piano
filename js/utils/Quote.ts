@@ -1,5 +1,10 @@
+interface QuoteObj {
+  author: string;
+  quote: string;
+}
+
 export default class Quote {
-  static quoteArray = [
+  static quoteArray: QuoteObj[] = [
     {
       author: "Mark Twain",
       quote: "The secret of getting ahead is getting started.",
@@ -26,7 +31,7 @@ export default class Quote {
   ];
 
   //Quote generator function
-  static getRandomQuote() {
+  static getRandomQuote(): QuoteObj {
     let random = Math.floor(Math.random() * this.quoteArray.length);
     const quoteObj = this.quoteArray[random];
 
