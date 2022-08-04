@@ -1,6 +1,7 @@
 import $ from "jquery";
 import { lightYellow, red } from "./global";
 import Quote from "./utils/Quote";
+import blowImage from "../img/blow.jpg";
 
 // This function tracks the progress of the user
 export const trackerFunction = (tracker: number) => {
@@ -376,7 +377,7 @@ export const trackerFunction = (tracker: number) => {
     document.querySelector<HTMLDivElement>("footer").style.padding = "3%";
 
     // Change avatar to Cheering
-    document.querySelector<HTMLImageElement>("#avatar").src = "./img/blow.jpg";
+    document.querySelector<HTMLImageElement>("#avatar").src = blowImage;
 
     // Play Cheering sound
     const cheering = new Audio("sound/cheering.mp3");
