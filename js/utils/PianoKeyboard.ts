@@ -1,8 +1,9 @@
 export default class PianoKeyboard {
   static audio = new Audio();
 
-  static play(event) {
-    const key = event.target.id;
+  static play(event: Event) {
+    const target = event.target as HTMLDivElement;
+    const key = target.id;
 
     let audioFile = "";
     switch (key) {
@@ -74,29 +75,31 @@ export default class PianoKeyboard {
   }
 
   //Change keyboard's color functions
-  static press(event) {
-    const key = event.target.id;
+  static press(event: Event) {
+    const target = event.target as HTMLDivElement;
+    const key = target.id;
 
     // If the key is one of the black keys, becasue black keys have longer id names
     if (key.length > 6) {
-      event.target.style.borderColor = "silver";
+      target.style.borderColor = "silver";
     }
 
-    event.target.style.backgroundColor = "silver";
+    target.style.backgroundColor = "silver";
     this.play(event);
   }
 
-  static release(event) {
+  static release(event: Event) {
     this.audio.pause(); // stop the previous sound
 
-    const key = event.target.id;
+    const target = event.target as HTMLDivElement;
+    const key = target.id;
     // If the key is one of the black keys, becasue black keys have longer id names
     if (key.length > 6) {
-      event.target.style.backgroundColor = "black";
-      event.target.style.borderColor = "black";
+      target.style.backgroundColor = "black";
+      target.style.borderColor = "black";
     } else {
-      event.target.style.backgroundColor = "white";
-      event.target.style.borderColor = "black";
+      target.style.backgroundColor = "white";
+      target.style.borderColor = "black";
     }
   }
 }
