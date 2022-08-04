@@ -33,6 +33,7 @@ html {
 /*This part is for piano*/
 .piano-container {
   padding-bottom: 5%;
+
   /* Disabling copy */
   user-select: none;
   -webkit-user-select: none;
@@ -60,6 +61,13 @@ html {
   height: 100px;
   position: relative;
   left: 12%;
+}
+
+#f {
+  border-radius: 10px 0px 0px 10px;
+}
+#b-high {
+  border-radius: 0px 10px 10px 0px;
 }
 
 #f,             /*These are for piano key's border*/
