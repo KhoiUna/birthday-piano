@@ -77,10 +77,11 @@ html {
   border-right: 2px solid black;
 }
 
+/*This is for the letters in the piano key*/
 .piano p {
-  /*This is for the letters in the piano key*/
   position: relative;
   top: 61%;
+  pointer-events: none;
 }
 
 #black-key-one,             /*This is for black keys*/
