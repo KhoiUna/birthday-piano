@@ -45,6 +45,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/play.css" />
     <title>Birthday Piano</title>
 
     <!-- Google tag (gtag.js) -->
@@ -65,31 +66,70 @@
 
   <body>
     <header>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Birthday Piano</h1>
-          </div>
-        </div>
+      <div class="head-container">
+        <a href="/index.html"><h1>Birthday Piano</h1></a>
       </div>
     </header>
 
     <main>
-      <section class="example-one">
-        <h5>Upload your image here:</h5>
+      <!-- TODO -->
+      <form action="/api/" method="post">
+        <p>Craft your birthday wish</p>
+        <hr />
 
-        <!-- Target DOM node #1 -->
-        <div class="for-DragDrop"></div>
+        <section class="inputs">
+          <div>
+            <label for="from-user">From:</label>
+            <input type="text" name="from-user" placeholder="Your name" />
+          </div>
 
-        <!-- Progress bar #1 -->
-        <div class="for-ProgressBar"></div>
+          <div>
+            <label for="to-user">To:</label>
+            <input
+              type="text"
+              name="to-user"
+              placeholder="Other person's name"
+            />
+          </div>
 
-        <!-- Uploaded files list #1 -->
-        <div class="uploaded-files">
-          <h5>Uploaded files:</h5>
-          <ol></ol>
-        </div>
-      </section>
+          <div>
+            <label for="date-of-birth">Their birthdate:</label>
+            <input type="date" name="date-of-birth" />
+          </div>
+
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Your email" />
+          </div>
+
+          <div>
+            <label for="wish">Your wish:</label>
+            <textarea
+              name="wish"
+              placeholder="Write your wish here..."
+              rows="5"
+            ></textarea>
+          </div>
+        </section>
+
+        <section class="inputs" id="image-upload">
+          <h5>Upload your image here:</h5>
+
+          <!-- Target DOM node #1 -->
+          <div class="for-DragDrop"></div>
+
+          <!-- Progress bar #1 -->
+          <div class="for-ProgressBar"></div>
+
+          <!-- Uploaded files list #1 -->
+          <div class="uploaded-files">
+            <h5>Uploaded files:</h5>
+            <ol></ol>
+          </div>
+        </section>
+
+        <button id="submit-button" type="submit">Submit</button>
+      </form>
     </main>
 
     <footer>
