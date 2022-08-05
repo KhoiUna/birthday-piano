@@ -6,6 +6,7 @@
 
 /* Header  */
 .head-container {
+  text-align: center;
   border: 3px dashed black;
   background-color: #fff;
   padding: 0.5rem;
