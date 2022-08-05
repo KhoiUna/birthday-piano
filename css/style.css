@@ -80,7 +80,7 @@ html {
 .piano p {
   /*This is for the letters in the piano key*/
   position: relative;
-  top: 67%;
+  top: 61%;
 }
 
 #black-key-one,             /*This is for black keys*/
