@@ -110,21 +110,21 @@
               rows="5"
             ></textarea>
           </div>
-        </section>
 
-        <section class="inputs" id="image-upload">
-          <h5>Upload your image here:</h5>
+          <div>
+            <label for="gift">Upload your picture:</label>
+            <input type="file" id="upload-image" style="border: none" />
 
-          <!-- Target DOM node #1 -->
-          <div class="for-DragDrop"></div>
+            <div id="status"></div>
+          </div>
 
-          <!-- Progress bar #1 -->
-          <div class="for-ProgressBar"></div>
-
-          <!-- Uploaded files list #1 -->
-          <div class="uploaded-files">
-            <h5>Uploaded files:</h5>
-            <ol></ol>
+          <div>
+            <img
+              id="image-uploaded"
+              src=""
+              alt="Image uploaded"
+              style="display: none; width: 100%"
+            />
           </div>
         </section>
 
