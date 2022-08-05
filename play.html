@@ -80,12 +80,18 @@
         <section class="inputs">
           <div>
             <label for="from-user">From:</label>
-            <input type="text" name="from-user" placeholder="Your name" />
+            <input
+              required
+              type="text"
+              name="from-user"
+              placeholder="Your name"
+            />
           </div>
 
           <div>
             <label for="to-user">To:</label>
             <input
+              required
               type="text"
               name="to-user"
               placeholder="Other person's name"
@@ -94,17 +100,23 @@
 
           <div>
             <label for="date-of-birth">Their birthdate:</label>
-            <input type="date" name="date-of-birth" />
+            <input required type="date" name="date-of-birth" />
           </div>
 
           <div>
             <label for="email">Email:</label>
-            <input type="email" name="email" placeholder="Your email" />
+            <input
+              required
+              type="email"
+              name="email"
+              placeholder="Your email"
+            />
           </div>
 
           <div>
             <label for="wish">Your wish:</label>
             <textarea
+              required
               name="wish"
               placeholder="Write your wish here..."
               rows="5"
@@ -113,7 +125,12 @@
 
           <div>
             <label for="gift">Upload your picture:</label>
-            <input type="file" id="upload-image" style="border: none" />
+            <input
+              required
+              type="file"
+              id="upload-image"
+              style="border: none"
+            />
 
             <div id="status"></div>
           </div>
