@@ -1,5 +1,14 @@
 @import url("./global.css");
 
+* {
+  margin: 0 auto;
+}
+
+html {
+  width: max-content;
+  text-align: center;
+}
+
 /*This part is for avatar*/
 .avatar {
   padding-top: 5%;
