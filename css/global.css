@@ -11,9 +11,15 @@ html {
 
 /*This part is for footer*/
 footer {
-  padding: 9rem 0 2rem 0;
   text-align: center;
   font-weight: bold;
+}
+footer .prompt-container {
+  padding: 0.5rem;
+  border: 3px solid #000;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 0.3rem 1rem 1rem 1rem;
 }
 footer p {
   margin: 0.5rem 0;
