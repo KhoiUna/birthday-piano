@@ -9,6 +9,7 @@ specifiers:
   '@vercel/node': ^2.5.6
   add: ^2.0.6
   imagekit: ^4.1.1
+  imagekit-javascript: ^1.5.2
   imagekit-uppy-plugin: ^1.0.2
   jquery: ^3.6.0
   typescript: ^4.7.4
@@ -22,6 +23,7 @@ dependencies:
   '@uppy/tus': 2.4.2_@uppy+core@2.3.2
   add: 2.0.6
   imagekit: 4.1.1
+  imagekit-javascript: 1.5.2
   imagekit-uppy-plugin: 1.0.2
   jquery: 3.6.0
   typescript: 4.7.4
@@ -919,6 +921,10 @@ packages:
     resolution: {integrity: sha512-HzxX+/hV/8US1Gq4V6R6PgUmJ5Pt/DGATs4QhdEOpG8LrdS9/3UG2nnOvkqUpRks04yjVtV5p/NODjO+wvf6vg==}
     engines: {node: '>= 0.4.0'}
     dev: true
+
+  /imagekit-javascript/1.5.2:
+    resolution: {integrity: sha512-qZquDA8vL4TGrn4VhKzzlnaDqPoYrn1Asrcfzfq0HvAy0w0P9jrPTl8foL6bPbvAGzx7Kj2P2M51HrOQKLX4IQ==}
+    dev: false
 
   /imagekit-uppy-plugin/1.0.2:
     resolution: {integrity: sha512-UB92Ba75sK79CcyW7YDzHei4RfGypyH4oX3zYTSn3M0zzc8fpBJwB9th/xLjqzo/mHZ/ayoktkdJIqx0fnmhHA==}
