@@ -18,7 +18,6 @@ form {
   border-radius: 10px;
   border: 3px solid #000;
   background-color: #fff;
-  min-height: 90vh;
   text-align: center;
 }
 form p {
@@ -48,7 +47,10 @@ textarea {
   border: 2px solid #000;
   font-size: 1rem;
 }
-form button {
+form #open-uppy {
+  padding: 0.2rem;
+}
+form #submit-button {
   font-weight: bold;
   background-color: #ffc0cb;
   margin: 1rem auto;
@@ -57,12 +59,6 @@ form button {
   font-size: 1.2rem;
   box-shadow: 1px 5px 10px 2px #000;
 }
-form button:active {
+form #submit-button:active {
   box-shadow: none;
-}
-
-#image-upload {
-  margin: auto;
-  text-align: center;
-  width: fit-content;
 }
