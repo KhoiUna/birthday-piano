@@ -1,16 +1,5 @@
 @import url("./global.css");
 
-.head-container {
-  border: 3px dashed black;
-  background-color: #fff;
-  padding: 0.5rem;
-}
-
-.head-container h3 {
-  text-align: center;
-  font-size: 22px;
-}
-
 /*This part is for avatar*/
 .avatar {
   padding-top: 5%;
