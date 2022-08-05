@@ -63,5 +63,6 @@ form button:active {
 
 #image-upload {
   margin: auto;
+  text-align: center;
   width: fit-content;
 }
