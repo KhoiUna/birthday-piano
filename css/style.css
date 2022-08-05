@@ -130,6 +130,15 @@ html {
   right: 19%;
 }
 
+.lyric-title {
+  /* Disable double tap to zoom on mobile */
+  touch-action: none;
+
+  /* Disabling copy */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
 /*This part is for the quote-container*/
 .quote-container {
   text-align: center;
