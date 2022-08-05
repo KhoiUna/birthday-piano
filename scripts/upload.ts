@@ -17,8 +17,6 @@ const form = document.querySelector("form");
 // Function to upload image to ImageKit
 const upload = async (e: Event) => {
   e.preventDefault();
-  console.log("public-key", import.meta.env.VITE_IMAGEKIT_PUBLIC_KEY);
-  console.log("endpoint:", import.meta.env.VITE_IMAGEKIT_URL_ENDPOINT);
 
   const imagekit = new ImageKit({
     publicKey: import.meta.env.VITE_IMAGEKIT_PUBLIC_KEY,
