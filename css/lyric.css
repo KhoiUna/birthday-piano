@@ -32,128 +32,35 @@
   z-index: 4;
   grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
 }
-.lyric-grid-one .lyric-box-one {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-one .lyric-box-two {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-one .lyric-box-three {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-one .lyric-box-four {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-one .lyric-box-five {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-one .lyric-box-six {
-  background-color: silver;
-  margin-top: 5%;
-}
 
 /* Second lyric */
 .lyric-grid-two {
-  /* display: none; */
   z-index: 3;
   grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
-}
-.lyric-grid-two .lyric-box-one {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-two .lyric-box-two {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-two .lyric-box-three {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-two .lyric-box-four {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-two .lyric-box-five {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-two .lyric-box-six {
-  background-color: silver;
-  margin-top: 5%;
 }
 
 /* Third lyric */
 .lyric-grid-three {
-  /* display: none; */
   z-index: 2;
   grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
-}
-.lyric-grid-three .lyric-box-one {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-three .lyric-box-two {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-three .lyric-box-three {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-three .lyric-box-four {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-three .lyric-box-five {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-three .lyric-box-six {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-three .lyric-box-seven {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-three .lyric-box-eight {
-  background-color: silver;
-  margin-top: 5%;
 }
 
 /* Fourth lyric */
 .lyric-grid-four {
-  /* display: none; */
   z-index: 1;
   grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
 }
-.lyric-grid-four .lyric-box-one {
+
+.lyric-box-one,
+.lyric-box-two,
+.lyric-box-three,
+.lyric-box-four,
+.lyric-box-five,
+.lyric-box-six,
+.lyric-box-seven,
+.lyric-box-eight {
   background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-four .lyric-box-two {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-four .lyric-box-three {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-four .lyric-box-four {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-four .lyric-box-five {
-  background-color: silver;
-  margin-top: 5%;
-}
-.lyric-grid-four .lyric-box-six {
-  background-color: silver;
+  border-radius: 5px;
+  padding: 0.2rem;
   margin-top: 5%;
 }
