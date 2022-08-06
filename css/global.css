@@ -16,6 +16,7 @@
 }
 .prompt-container p {
   margin: 0.5rem 0;
+  line-height: 2rem;
 }
 .prompt-container .prompt {
   font-size: larger;
@@ -31,23 +32,17 @@
 /* Header  */
 .head-container {
   text-align: center;
-  border: 3px dashed black;
-  background-color: #fff;
   padding: 0.5rem;
 }
 .head-container a {
   color: #000;
-  text-decoration: none;
-}
-.head-container h3 {
-  text-align: center;
-  font-size: 22px;
 }
 
 /*This part is for footer*/
 footer {
   text-align: center;
   font-weight: bold;
+  padding: 0.5rem 0;
 }
 footer p {
   margin: 0.5rem 0;
