@@ -4,8 +4,8 @@
   margin: 0 auto;
 }
 
-html {
-  width: max-content;
+body {
+  width: fit-content;
   text-align: center;
 }
 
