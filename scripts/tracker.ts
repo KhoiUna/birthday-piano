@@ -85,8 +85,7 @@ export const trackerFunction = (tracker: number) => {
     correctKey = true;
 
     // Switch slide from red B note to red G note for lyric 'HAP' in next slide
-    document.querySelector<HTMLDivElement>(".lyric-grid-one").style.display =
-      "none";
+    document.querySelector<HTMLDivElement>(".lyric-grid-one").remove();
 
     document.getElementById("g").style.backgroundColor = red;
   }
@@ -171,8 +170,7 @@ export const trackerFunction = (tracker: number) => {
     correctKey = true;
 
     // Switch slide from red C note to red G note for lyric 'HAP' in next slide
-    document.querySelector<HTMLDivElement>(".lyric-grid-two").style.display =
-      "none";
+    document.querySelector<HTMLDivElement>(".lyric-grid-two").remove();
 
     document.getElementById("g").style.backgroundColor = red;
   }
@@ -285,8 +283,7 @@ export const trackerFunction = (tracker: number) => {
     correctKey = true;
 
     // Switch slide from red A note to red F-high note for lyric 'HAP' in next slide
-    document.querySelector<HTMLDivElement>(".lyric-grid-three").style.display =
-      "none";
+    document.querySelector<HTMLDivElement>(".lyric-grid-three").remove();
 
     document.getElementById("f-high").style.backgroundColor = red;
   }
@@ -368,9 +365,10 @@ export const trackerFunction = (tracker: number) => {
   }
 
   if (tracker === 26) {
-    //Finish game: change lyric box
-    document.querySelector<HTMLHeadingElement>(".lyric-title").style.display =
-      "none";
+    //Finish game
+    document.querySelector<HTMLDivElement>(".lyric-grid-four").remove();
+    document.querySelector<HTMLHeadingElement>(".lyric-title").remove();
+
     document.querySelector<HTMLDivElement>(".quote-container").style.display =
       "block";
     document.querySelector<HTMLDivElement>("footer").style.padding = "3%";
