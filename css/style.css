@@ -23,6 +23,7 @@ html {
 /*This part is for piano*/
 .piano-container {
   padding-bottom: 5%;
+  width: fit-content;
 
   /* Disable double tap to zoom on mobile */
   touch-action: none;
