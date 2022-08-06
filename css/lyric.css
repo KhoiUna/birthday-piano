@@ -1,5 +1,12 @@
 .lyric-grid-container {
   width: 300px;
+
+  /* Disable double tap to zoom on mobile */
+  touch-action: none;
+
+  /* Disabling copy */
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .lyric-grid-container p {
@@ -10,6 +17,8 @@
 .lyric-grid-two,
 .lyric-grid-three,
 .lyric-grid-four {
+  border-radius: 10px;
+  padding: 0.3rem;
   display: grid;
   position: absolute;
   background-color: white;
