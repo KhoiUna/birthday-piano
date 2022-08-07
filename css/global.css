@@ -28,6 +28,15 @@
 .prompt-container .donate-button {
   margin: 0 auto 1rem auto;
 }
+.prompt-container .social-share {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.prompt-container .social-share .share-buttons {
+  margin: 0.5rem;
+}
 
 /* Header  */
 .head-container {

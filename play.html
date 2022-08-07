@@ -65,6 +65,16 @@
   </head>
 
   <body>
+    <!-- Load Facebook JavaScript SDK -->
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0"
+      nonce="xZCtqcZ0"
+    ></script>
+
     <header>
       <div class="head-container">
         <a href="/index.html"><h1>Birthday Piano</h1></a>
@@ -88,6 +98,43 @@
             data-font-color="#ffffff"
             data-coffee-color="#FFDD00"
           ></script>
+        </div>
+
+        <p class="donate-title">Share this app:</p>
+        <div class="social-share">
+          <div class="share-buttons">
+            <a
+              href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+              class="twitter-share-button"
+              data-text="Hey! Try this Birthday Piano app where you can craft your wish and send a song for someone&#39;s birthday!"
+              data-via="KhoiUna"
+              data-hashtags="birthdaypiano"
+              data-related="KhoiUna"
+              data-show-count="false"
+              >Tweet</a
+            >
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+          </div>
+
+          <div class="share-buttons">
+            <div
+              class="fb-share-button"
+              data-href="https://birthday.khoiuna.info/"
+              data-layout="button"
+              data-size="small"
+            >
+              <a
+                target="_blank"
+                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbirthday.khoiuna.info%2F&amp;src=sdkpreparse"
+                class="fb-xfbml-parse-ignore"
+                >Share</a
+              >
+            </div>
+          </div>
         </div>
       </div>
 
