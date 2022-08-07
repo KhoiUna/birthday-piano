@@ -1,77 +1,77 @@
 export default class PianoKeyboard {
-  static audio = new Audio();
+  static currentAudio = new Audio();
 
   static play(event: Event) {
     const target = event.target as HTMLDivElement;
     const key = target.id;
 
-    let audioFile = "";
+    let audioFile: HTMLAudioElement;
     switch (key) {
       case "f":
-        audioFile = "sound/F.m4a";
+        audioFile = new Audio("/sound/F.m4a");
         break;
       case "g":
-        audioFile = "sound/G.m4a";
+        audioFile = new Audio("/sound/G.m4a");
         break;
       case "a":
-        audioFile = "sound/A.m4a";
+        audioFile = new Audio("/sound/A.m4a");
         break;
       case "b":
-        audioFile = "sound/B.m4a";
+        audioFile = new Audio("/sound/B.m4a");
         break;
       case "c":
-        audioFile = "sound/C.m4a";
+        audioFile = new Audio("/sound/C.m4a");
         break;
       case "d":
-        audioFile = "sound/D.m4a";
+        audioFile = new Audio("/sound/D.m4a");
         break;
       case "e":
-        audioFile = "sound/E.m4a";
+        audioFile = new Audio("/sound/E.m4a");
         break;
       case "f-high":
-        audioFile = "sound/Fhigh.m4a";
+        audioFile = new Audio("/sound/Fhigh.m4a");
         break;
       case "g-high":
-        audioFile = "sound/Ghigh.m4a";
+        audioFile = new Audio("/sound/Ghigh.m4a");
         break;
       case "a-high":
-        audioFile = "sound/Ahigh.m4a";
+        audioFile = new Audio("/sound/Ahigh.m4a");
         break;
       case "b-high":
-        audioFile = "sound/Bhigh.m4a";
+        audioFile = new Audio("/sound/Bhigh.m4a");
         break;
       case "black-key-one":
-        audioFile = "sound/Fsharp.m4a";
+        audioFile = new Audio("/sound/Fsharp.m4a");
         break;
       case "black-key-two":
-        audioFile = "sound/Gsharp.m4a";
+        audioFile = new Audio("/sound/Gsharp.m4a");
         break;
       case "black-key-three":
-        audioFile = "sound/Asharp.m4a";
+        audioFile = new Audio("/sound/Asharp.m4a");
         break;
       case "black-key-four":
-        audioFile = "sound/Csharp.m4a";
+        audioFile = new Audio("/sound/Csharp.m4a");
         break;
       case "black-key-five":
-        audioFile = "sound/Dsharp.m4a";
+        audioFile = new Audio("/sound/Dsharp.m4a");
         break;
       case "black-key-six":
-        audioFile = "sound/Fsharphigh.m4a";
+        audioFile = new Audio("/sound/Fsharphigh.m4a");
         break;
       case "black-key-seven":
-        audioFile = "sound/Gsharphigh.m4a";
+        audioFile = new Audio("/sound/Gsharphigh.m4a");
         break;
       case "black-key-eight":
-        audioFile = "sound/Bhigh.m4a";
+        audioFile = new Audio("/sound/Bhigh.m4a");
         break;
       default:
         return;
     }
 
-    this.audio.src = audioFile;
-    this.audio.load();
-    this.audio.play();
-    this.audio.volume = 1;
+    this.currentAudio = audioFile;
+    this.currentAudio.load();
+    this.currentAudio.play();
+    this.currentAudio.volume = 1;
   }
 
   //Change keyboard's color functions
@@ -89,7 +89,7 @@ export default class PianoKeyboard {
   }
 
   static release(event: Event) {
-    this.audio.pause(); // stop the previous sound
+    this.currentAudio.pause(); // stop the previous sound
 
     const target = event.target as HTMLDivElement;
     const key = target.id;
