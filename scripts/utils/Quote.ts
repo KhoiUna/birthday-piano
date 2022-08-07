@@ -1,3 +1,5 @@
+import { wish } from "../initialState";
+
 interface QuoteObj {
   author: string;
   quote: string;
@@ -32,7 +34,14 @@ export default class Quote {
 
   //Quote generator function
   static getRandomQuote(): QuoteObj {
-    let random = Math.floor(Math.random() * this.quoteArray.length);
+    if (wish.fromUser) {
+      return {
+        author: wish.fromUser,
+        quote: wish.wishText,
+      };
+    }
+
+    const random = Math.floor(Math.random() * this.quoteArray.length);
     const quoteObj = this.quoteArray[random];
 
     return quoteObj;
