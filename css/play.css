@@ -51,6 +51,8 @@ form #open-uppy {
   padding: 0.2rem;
 }
 form #submit-button {
+  color: #000;
+  cursor: pointer;
   font-weight: bold;
   background-color: #ffc0cb;
   margin: 1rem auto;
@@ -58,6 +60,7 @@ form #submit-button {
   padding: 0.5rem;
   font-size: 1.2rem;
   box-shadow: 1px 5px 10px 2px #000;
+  border: 1px solid #000;
 }
 form #submit-button:active {
   box-shadow: none;
