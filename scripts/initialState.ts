@@ -112,8 +112,11 @@ window.addEventListener("load", async () => {
   document.querySelector<HTMLSpanElement>("#to-user").innerText =
     ", " + to_user;
 
-  // TODO if not yet birthday, show message
-  //
+  // If not yet birthday, show message
+  const dateOfBirth = new Date(date_of_birth);
+  if (dateOfBirth.getTime() - new Date().getTime() > 0) {
+    mainElement.innerHTML = `<h1 style="margin: 2rem">Your birthday is yet to come! You cannot see it yet!</h1>`;
+  }
 
   document.querySelector<HTMLImageElement>("#avatar").src = image_url;
   document.querySelector<HTMLImageElement>("#avatar").alt =
