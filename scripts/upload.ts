@@ -116,4 +116,17 @@ form.addEventListener("submit", async (e: Event) => {
       body: JSON.stringify(userInput),
     })
   ).json();
+
+  console.log(response);
+
+  if (response.error) {
+    submitResponse.innerText = response.error;
+    submitResponse.style.color = red;
+    return;
+  }
+
+  const linkToShare = `${window.location.origin}/?id=${response.success.id}&from_user=${response.success.from_user}&to_user=${response.success.to_user}`;
+  submitResponse.innerHTML = `Successfully submitted. Here is your link to share: <a href="${linkToShare}">${linkToShare}</a>`;
+  submitResponse.style.color = "green";
+  form.reset();
 });
