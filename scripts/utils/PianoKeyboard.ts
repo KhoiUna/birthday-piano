@@ -8,61 +8,61 @@ export default class PianoKeyboard {
     let audioFile: HTMLAudioElement;
     switch (key) {
       case "f":
-        audioFile = new Audio("/sound/F.m4a");
+        audioFile = new Audio("/ogg/F.ogg");
         break;
       case "g":
-        audioFile = new Audio("/sound/G.m4a");
+        audioFile = new Audio("/ogg/G.ogg");
         break;
       case "a":
-        audioFile = new Audio("/sound/A.m4a");
+        audioFile = new Audio("/ogg/A.ogg");
         break;
       case "b":
-        audioFile = new Audio("/sound/B.m4a");
+        audioFile = new Audio("/ogg/B.ogg");
         break;
       case "c":
-        audioFile = new Audio("/sound/C.m4a");
+        audioFile = new Audio("/ogg/C.ogg");
         break;
       case "d":
-        audioFile = new Audio("/sound/D.m4a");
+        audioFile = new Audio("/ogg/D.ogg");
         break;
       case "e":
-        audioFile = new Audio("/sound/E.m4a");
+        audioFile = new Audio("/ogg/E.ogg");
         break;
       case "f-high":
-        audioFile = new Audio("/sound/Fhigh.m4a");
+        audioFile = new Audio("/ogg/Fhigh.ogg");
         break;
       case "g-high":
-        audioFile = new Audio("/sound/Ghigh.m4a");
+        audioFile = new Audio("/ogg/Ghigh.ogg");
         break;
       case "a-high":
-        audioFile = new Audio("/sound/Ahigh.m4a");
+        audioFile = new Audio("/ogg/Ahigh.ogg");
         break;
       case "b-high":
-        audioFile = new Audio("/sound/Bhigh.m4a");
+        audioFile = new Audio("/ogg/Bhigh.ogg");
         break;
       case "black-key-one":
-        audioFile = new Audio("/sound/Fsharp.m4a");
+        audioFile = new Audio("/ogg/Fsharp.ogg");
         break;
       case "black-key-two":
-        audioFile = new Audio("/sound/Gsharp.m4a");
+        audioFile = new Audio("/ogg/Gsharp.ogg");
         break;
       case "black-key-three":
-        audioFile = new Audio("/sound/Asharp.m4a");
+        audioFile = new Audio("/ogg/Asharp.ogg");
         break;
       case "black-key-four":
-        audioFile = new Audio("/sound/Csharp.m4a");
+        audioFile = new Audio("/ogg/Csharp.ogg");
         break;
       case "black-key-five":
-        audioFile = new Audio("/sound/Dsharp.m4a");
+        audioFile = new Audio("/ogg/Dsharp.ogg");
         break;
       case "black-key-six":
-        audioFile = new Audio("/sound/Fsharphigh.m4a");
+        audioFile = new Audio("/ogg/Fsharphigh.ogg");
         break;
       case "black-key-seven":
-        audioFile = new Audio("/sound/Gsharphigh.m4a");
+        audioFile = new Audio("/ogg/Gsharphigh.ogg");
         break;
       case "black-key-eight":
-        audioFile = new Audio("/sound/Bhigh.m4a");
+        audioFile = new Audio("/ogg/Bhigh.ogg");
         break;
       default:
         return;
