@@ -117,8 +117,6 @@ form.addEventListener("submit", async (e: Event) => {
     })
   ).json();
 
-  console.log(response);
-
   if (response.error) {
     submitResponse.innerText = response.error;
     submitResponse.style.color = red;

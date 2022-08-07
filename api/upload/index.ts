@@ -14,7 +14,6 @@ export default async (req: VercelRequest, res: VercelResponse) => {
       req.body["image-url"],
     ]);
 
-    console.log(response);
     if (!response.rowCount) {
       res.status(500).json({
         success: false,
