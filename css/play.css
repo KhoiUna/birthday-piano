@@ -47,8 +47,8 @@ textarea {
   border: 2px solid #000;
   font-size: 1rem;
 }
-form #open-uppy {
-  padding: 0.2rem;
+form input[type="file"] {
+  font-size: 0.7rem;
 }
 form #submit-button {
   color: #000;
