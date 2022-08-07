@@ -1,4 +1,5 @@
 import ImageKit from "imagekit-javascript";
+import { red } from "./global";
 
 // Variable to store user input
 const userInput = {
@@ -13,6 +14,8 @@ const userInput = {
 // Declare elements
 const file = document.querySelector<HTMLInputElement>("#upload-image");
 const form = document.querySelector("form");
+const submitResponse =
+  document.querySelector<HTMLParagraphElement>("#submit-response");
 
 // Function to upload image to ImageKit
 const upload = async (e: Event) => {
@@ -58,7 +61,7 @@ const upload = async (e: Event) => {
 // Add event listener to elements
 file.addEventListener("change", upload);
 
-form.addEventListener("submit", async (e) => {
+form.addEventListener("submit", async (e: Event) => {
   e.preventDefault();
 
   // Get form values and store in userInput
@@ -69,9 +72,41 @@ form.addEventListener("submit", async (e) => {
 
   // Validate user input
   const isValid = Object.values(userInput).every((value) => value !== "");
-  if (!isValid) alert("Please fill out all fields");
+  if (!isValid) {
+    alert("Please fill out all fields");
+    return;
+  }
+
+  // Captcha
+  // @ts-ignore
+  grecaptcha.ready(() => {
+    // @ts-ignore
+    grecaptcha
+      .execute(import.meta.env.VITE_RECAPTCHA_SITE_KEY, { action: "submit" })
+      .then(async (token: string) => {
+        // Send token to server to validate captcha
+        const response = await (
+          await fetch("/api/upload/captcha", {
+            method: "POST",
+            headers: new Headers({
+              "Content-Type": "application/json",
+            }),
+            body: JSON.stringify({ token }),
+          })
+        ).json();
+
+        // If captcha is lower than 0.5, show error message
+        if (response.error || response.success.score < 0.5) {
+          console.error("Error validating captcha");
+          submitResponse.innerText = "Error validating captcha";
+          submitResponse.style.color = red;
+          return;
+        }
+      });
+  });
 
   // Send user input to server
+  // TODO: submit-response "Successfully submitted"
   const response = await (
     await fetch("/api/upload", {
       method: "POST",
