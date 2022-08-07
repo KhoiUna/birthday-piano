@@ -403,10 +403,6 @@ export const trackerFunction = (tracker: number) => {
         ".quote-container"
       ).style.backgroundColor = lightYellow;
 
-      document.querySelector<HTMLDivElement>(
-        ".quote-box"
-      ).style.backgroundColor = "yellow";
-
       document.querySelector<HTMLDivElement>("#quote-title").innerHTML =
         "ONCE MORE, HAPPY BIRTHDAY!";
     });
