@@ -88,7 +88,11 @@ window.addEventListener("load", async () => {
   loadSound();
 
   const idParam = Number(parseParam("id"));
-  if (idParam === 0) return;
+  if (idParam === 0) {
+    mainElement.style.display = "block";
+    loaderElement.style.display = "none";
+    return;
+  }
 
   // Load wish and set initial states of wish
   const response = await Wish.fetchWish(idParam);
