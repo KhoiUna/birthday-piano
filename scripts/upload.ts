@@ -123,7 +123,7 @@ form.addEventListener("submit", async (e: Event) => {
     return;
   }
 
-  const linkToShare = `${window.location.origin}/?id=${response.success.id}&from_user=${response.success.from_user}&to_user=${response.success.to_user}`;
+  const linkToShare = `${window.location.origin}/?id=${response.success.id}`;
   submitResponse.innerHTML = `Successfully submitted. Here is your link to share: <a href="${linkToShare}">${linkToShare}</a>`;
   submitResponse.style.color = "green";
   form.reset();
