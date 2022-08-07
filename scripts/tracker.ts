@@ -388,7 +388,10 @@ export const trackerFunction = (tracker: number) => {
     sound.volume = 0.5;
 
     // Show quote
+    let first = true;
     $("#gift").on("click", () => {
+      if (!first) return;
+
       const quoteObj = Quote.getRandomQuote();
 
       document.querySelector<HTMLDivElement>(
@@ -405,6 +408,8 @@ export const trackerFunction = (tracker: number) => {
 
       document.querySelector<HTMLDivElement>("#quote-title").innerHTML =
         "ONCE MORE, HAPPY BIRTHDAY!";
+
+      first = false;
     });
   }
 
