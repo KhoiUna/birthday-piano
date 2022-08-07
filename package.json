@@ -13,6 +13,7 @@
     "vite": "^3.0.0"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "imagekit": "^4.1.1",
     "imagekit-javascript": "^1.5.2",
     "jquery": "^3.6.0",
