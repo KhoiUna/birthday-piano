@@ -14,8 +14,13 @@ const userInput = {
 // Declare elements
 const file = document.querySelector<HTMLInputElement>("#upload-image");
 const form = document.querySelector("form");
+const dateInputResponse = document.querySelector<HTMLParagraphElement>(
+  "#date-input-response"
+);
 const submitResponse =
   document.querySelector<HTMLParagraphElement>("#submit-response");
+const submitButton =
+  document.querySelector<HTMLButtonElement>("#submit-button");
 
 // Function to upload image to ImageKit
 const upload = async (e: Event) => {
@@ -63,6 +68,8 @@ file.addEventListener("change", upload);
 
 form.addEventListener("submit", async (e: Event) => {
   e.preventDefault();
+  submitButton.innerHTML = "Submitting...";
+  submitButton.disabled = true;
 
   // Get form values and store in userInput
   const formData = new FormData(form);
@@ -73,8 +80,27 @@ form.addEventListener("submit", async (e: Event) => {
   // Validate user input
   const isValid = Object.values(userInput).every((value) => value !== "");
   if (!isValid) {
+    submitButton.innerHTML = "Submit";
+    submitButton.disabled = false;
     alert("Please fill out all fields");
     return;
+  }
+
+  // Validate date of birth
+  const birthday = new Date(userInput["date-of-birth"]);
+  if (birthday.getTime() - new Date().getTime() < 0) {
+    dateInputResponse.style.display = "block";
+    dateInputResponse.innerText = "* Invalid date";
+    dateInputResponse.style.color = red;
+
+    submitButton.innerHTML = "Submit";
+    submitButton.disabled = false;
+
+    submitResponse.innerText = "Invalid input. Please check again.";
+    submitResponse.style.color = red;
+    return;
+  } else {
+    dateInputResponse.style.display = "none";
   }
 
   // Captcha
@@ -97,7 +123,9 @@ form.addEventListener("submit", async (e: Event) => {
 
         // If captcha is lower than 0.5, show error message
         if (response.error || response.success.score < 0.5) {
-          console.error("Error validating captcha");
+          submitButton.innerHTML = "Submit";
+          submitButton.disabled = false;
+
           submitResponse.innerText = "Error validating captcha";
           submitResponse.style.color = red;
           return;
@@ -106,7 +134,6 @@ form.addEventListener("submit", async (e: Event) => {
   });
 
   // Send user input to server
-  // TODO: submit-response "Successfully submitted"
   const response = await (
     await fetch("/api/upload", {
       method: "POST",
@@ -118,6 +145,9 @@ form.addEventListener("submit", async (e: Event) => {
   ).json();
 
   if (response.error) {
+    submitButton.innerHTML = "Submit";
+    submitButton.disabled = false;
+
     submitResponse.innerText = response.error;
     submitResponse.style.color = red;
     return;
@@ -126,5 +156,9 @@ form.addEventListener("submit", async (e: Event) => {
   const linkToShare = `${window.location.origin}/?id=${response.success.id}`;
   submitResponse.innerHTML = `Successfully submitted. Here is your link to share: <a href="${linkToShare}">${linkToShare}</a>`;
   submitResponse.style.color = "green";
+
+  submitButton.innerHTML = "Submit";
+  submitButton.disabled = false;
+
   form.reset();
 });
