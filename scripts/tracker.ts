@@ -366,17 +366,24 @@ export const trackerFunction = (tracker: number) => {
 
   if (tracker === 26) {
     //Finish game
-    document.querySelector<HTMLDivElement>(".lyric-grid-four").remove();
-    document.querySelector<HTMLHeadingElement>(".lyric-title").remove();
+    if (
+      document.querySelector<HTMLDivElement>(".lyric-grid-four") &&
+      document.querySelector<HTMLHeadingElement>(".lyric-title")
+    ) {
+      document.querySelector<HTMLDivElement>(".lyric-grid-four").remove();
+      document.querySelector<HTMLHeadingElement>(".lyric-title").remove();
+    }
 
     document.querySelector<HTMLDivElement>(".quote-container").style.display =
       "block";
     document.querySelector<HTMLDivElement>("footer").style.padding = "3%";
 
     // Play Cheering sound
-    const cheering = new Audio("/ogg/cheering.ogg");
-    cheering.volume = 0.3;
-    cheering.play();
+    // @ts-ignore
+    createjs.Sound.registerSound("/sound/cheering.mp3", "cheering");
+    // @ts-ignore
+    const sound = createjs.Sound.play("cheering"); // play using id
+    sound.volume = 0.5;
 
     // Show quote
     $("#gift").on("click", () => {
