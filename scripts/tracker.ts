@@ -374,7 +374,7 @@ export const trackerFunction = (tracker: number) => {
     document.querySelector<HTMLDivElement>("footer").style.padding = "3%";
 
     // Play Cheering sound
-    const cheering = new Audio("sound/cheering.mp3");
+    const cheering = new Audio("/ogg/cheering.ogg");
     cheering.volume = 0.3;
     cheering.play();
 
