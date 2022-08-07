@@ -83,7 +83,7 @@
 
     <header>
       <div class="head-container">
-        <h1>HAPPY BIRTHDAY <span id="name"></span>!</h1>
+        <h1>HAPPY BIRTHDAY<span id="to-user"></span>!</h1>
         <div
           style="
             font-style: italic;
@@ -93,10 +93,13 @@
           "
         >
           <p>From: <span id="from-user">...</span></p>
-          <p style="margin-top: 0.3rem">To: <span id="to-user">...</span></p>
         </div>
       </div>
     </header>
+
+    <div id="loader" style="margin: 4.5rem 0 3.5rem 0">
+      <h2>Loading...</h2>
+    </div>
 
     <main>
       <!-- This part is for avatar picture -->
@@ -271,7 +274,7 @@
       >
         <a href="./play.html"
           ><p class="prompt">
-            Click here to craft your birthday wish
+            Click here to craft a birthday wish
             <br />& send to someone!
           </p></a
         >
