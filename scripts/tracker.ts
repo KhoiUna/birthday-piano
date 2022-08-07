@@ -2,10 +2,6 @@ import $ from "jquery";
 import { lightYellow, red } from "./global";
 import Quote from "./utils/Quote";
 
-// Register cheering sound effect
-// @ts-ignore
-createjs.Sound.registerSound("/sound/cheering.mp3", "cheering");
-
 // This function tracks the progress of the user
 export const trackerFunction = (tracker: number) => {
   let correctKey = false; // Set to true if user presses the key matched with the lyric
