@@ -6,6 +6,7 @@ const userInput = {
   "from-user": "",
   "to-user": "",
   "date-of-birth": "",
+  "allow-to-play-immediately": "",
   email: "",
   wish: "",
   "image-url": "",
@@ -14,6 +15,8 @@ const userInput = {
 // Declare elements
 const file = document.querySelector<HTMLInputElement>("#upload-image");
 const form = document.querySelector("form");
+const dateInput =
+  document.querySelector<HTMLInputElement>("input[type='date']");
 const dateInputResponse = document.querySelector<HTMLParagraphElement>(
   "#date-input-response"
 );
@@ -68,7 +71,22 @@ const upload = async (e: Event) => {
 // Add event listener to elements
 file.addEventListener("change", upload);
 
-document.querySelector<HTMLInputElement>("input[type='date']").addEventListener(
+document.querySelector("select").addEventListener("change", (e) => {
+  const target = e.target as HTMLSelectElement;
+  if (target.value === "yes") {
+    userInput["allow-to-play-immediately"] = "yes";
+    document.querySelector<HTMLDivElement>("#date-of-birth-div").style.display =
+      "none";
+    dateInputResponse.style.display = "none";
+  }
+  if (target.value === "no") {
+    userInput["allow-to-play-immediately"] = "no";
+    document.querySelector<HTMLDivElement>("#date-of-birth-div").style.display =
+      "flex";
+  }
+});
+
+dateInput.addEventListener(
   "change",
 
   (e) => {
@@ -84,8 +102,6 @@ document.querySelector<HTMLInputElement>("input[type='date']").addEventListener(
       submitButton.innerHTML = "Submit";
       submitButton.disabled = false;
 
-      submitResponse.innerText = "Invalid input. Please check again.";
-      submitResponse.style.color = red;
       return;
     }
 
@@ -126,7 +142,10 @@ form.addEventListener("submit", async (e: Event) => {
   });
 
   // Validate user input
-  const isValid = Object.values(userInput).every((value) => value !== "");
+  const isValid = Object.entries(userInput).every(([key, value]) => {
+    if (key === "date-of-birth") return true;
+    return value !== "";
+  });
   if (!isValid) {
     submitButton.innerHTML = "Submit";
     submitButton.disabled = false;
