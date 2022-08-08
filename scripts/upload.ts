@@ -204,7 +204,7 @@ form.addEventListener("submit", async (e: Event) => {
   }
 
   const linkToShare = `${window.location.origin}/?id=${response.success.id}`;
-  submitResponse.innerHTML = `Successfully submitted. Here is your link to share: <a href="${linkToShare}">${linkToShare}</a>`;
+  submitResponse.innerHTML = `Successfully submitted!<br/>Here is your link to share: <a href="${linkToShare}">${linkToShare}</a><br/>An email with this link will be sent to you (make sure to check your spam folder).`;
   submitResponse.style.color = "green";
 
   submitButton.innerHTML = "Submit";
