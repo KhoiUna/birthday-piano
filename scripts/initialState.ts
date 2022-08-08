@@ -2,12 +2,13 @@ import { red } from "./global";
 import { parseParam } from "./helpers/parseParam";
 import { randomTheme } from "./helpers/randomTheme";
 import Wish from "./utils/Wish";
+import khoiAvatar from "../img/avatar.jpg";
 
 // Declare elements
 const mainElement = document.querySelector("main");
 mainElement.style.display = "none";
 
-const loaderElement = document.querySelector("#loader");
+const loaderElement = document.querySelector<HTMLDivElement>("#loader");
 
 // Set initial states of
 // 1st slide
@@ -88,9 +89,18 @@ window.addEventListener("load", async () => {
   loadSound();
 
   const idParam = Number(parseParam("id"));
+  // If there's no idParam in the URL, show Khoi Nguyen's avatar
   if (idParam === 0) {
     mainElement.style.display = "block";
     loaderElement.style.display = "none";
+
+    document.querySelector<HTMLSpanElement>("#from-user").innerText =
+      "Khoi Nguyen";
+    document.querySelector<HTMLSpanElement>("#to-user").innerText = "";
+
+    document.querySelector<HTMLImageElement>("#avatar").src = khoiAvatar;
+    document.querySelector<HTMLImageElement>("#avatar").alt =
+      "Khoi Nguyen's avatar";
     return;
   }
 
