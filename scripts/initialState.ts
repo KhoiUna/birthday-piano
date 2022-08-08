@@ -88,9 +88,9 @@ export const wish = { wishText: "", fromUser: "" };
 window.addEventListener("load", async () => {
   loadSound();
 
-  const idParam = Number(parseParam("id"));
-  // If there's no idParam in the URL, show Khoi Nguyen's avatar
-  if (idParam === 0) {
+  const idParam = parseParam("id");
+  // If there's no idParam found in the URL, show Khoi Nguyen's avatar
+  if (!idParam) {
     mainElement.style.display = "block";
     loaderElement.style.display = "none";
 
