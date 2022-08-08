@@ -1,9 +1,37 @@
-import $ from "jquery";
 import { lightYellow, red } from "./global";
 import Quote from "./utils/Quote";
 
+// Declare variables
+let theEnd = false;
+
+// This function displays the quote and author
+const displayQuote = () => {
+  if (theEnd) return;
+
+  const quoteObj = Quote.getRandomQuote();
+
+  document.querySelector<HTMLDivElement>(
+    "#gift"
+  ).innerHTML = `" ${quoteObj.quote} "`;
+
+  document.querySelector<HTMLDivElement>(
+    "#author"
+  ).innerHTML = `- ${quoteObj.author} -`;
+
+  document.querySelector<HTMLDivElement>(
+    ".quote-container"
+  ).style.backgroundColor = lightYellow;
+
+  document.querySelector<HTMLDivElement>("#quote-title").innerHTML =
+    "ONCE MORE, HAPPY BIRTHDAY!";
+
+  theEnd = true; // Prevent playing cheering sound & clicking on the quote again
+};
+
 // This function tracks the progress of the user
 export const trackerFunction = (tracker: number) => {
+  if (theEnd) return false;
+
   let correctKey = false; // Set to true if user presses the key matched with the lyric
   //
   //
@@ -384,29 +412,7 @@ export const trackerFunction = (tracker: number) => {
     sound.volume = 0.5;
 
     // Show quote
-    let first = true;
-    $("#gift").on("click", () => {
-      if (!first) return;
-
-      const quoteObj = Quote.getRandomQuote();
-
-      document.querySelector<HTMLDivElement>(
-        "#gift"
-      ).innerHTML = `" ${quoteObj.quote} "`;
-
-      document.querySelector<HTMLDivElement>(
-        "#author"
-      ).innerHTML = `- ${quoteObj.author} -`;
-
-      document.querySelector<HTMLDivElement>(
-        ".quote-container"
-      ).style.backgroundColor = lightYellow;
-
-      document.querySelector<HTMLDivElement>("#quote-title").innerHTML =
-        "ONCE MORE, HAPPY BIRTHDAY!";
-
-      first = false;
-    });
+    document.querySelector("#gift").addEventListener("click", displayQuote);
   }
 
   return correctKey;

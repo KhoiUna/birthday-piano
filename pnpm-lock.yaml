@@ -6,7 +6,6 @@ specifiers:
   axios: ^0.27.2
   imagekit: ^4.1.1
   imagekit-javascript: ^1.5.2
-  jquery: ^3.6.0
   pg: ^8.7.3
   typescript: ^4.7.4
   vite: ^3.0.0
@@ -15,7 +14,6 @@ dependencies:
   axios: 0.27.2
   imagekit: 4.1.1
   imagekit-javascript: 1.5.2
-  jquery: 3.6.0
   pg: 8.7.3
   typescript: 4.7.4
 
@@ -771,10 +769,6 @@ packages:
     resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==}
     engines: {node: '>=0.12.0'}
     dev: true
-
-  /jquery/3.6.0:
-    resolution: {integrity: sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==}
-    dev: false
 
   /json-schema-to-ts/1.6.4:
     resolution: {integrity: sha512-pR4yQ9DHz6itqswtHCm26mw45FSNfQ9rEQjosaZErhn5J3J2sIViQiz8rDaezjKAhFGpmsoczYVBgGHzFw/stA==}
