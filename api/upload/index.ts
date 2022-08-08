@@ -7,6 +7,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     const toUser = req.body["to-user"];
     const email = req.body.email;
     const dateOfBirth = req.body["date-of-birth"];
+    const allowToPlayImmediately = req.body["allow-to-play-immediately"];
     const wishText = req.body.wish;
     const imageUrl = req.body["image-url"];
 
@@ -14,7 +15,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
       fromUser.trim() === "" ||
       toUser.trim() === "" ||
       email.trim() === "" ||
-      dateOfBirth === "" ||
+      allowToPlayImmediately === "" ||
       wishText.trim() === "" ||
       imageUrl === ""
     )
@@ -27,14 +28,15 @@ export default async (req: VercelRequest, res: VercelResponse) => {
       return res.status(400).send("Wish text can only contain 100 characters");
 
     const sql =
-      "INSERT INTO wish (from_user, to_user, email, date_of_birth, wish_text, image_url) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id, from_user, to_user;";
+      "INSERT INTO wish (from_user, to_user, email, date_of_birth, wish_text, image_url, allow_to_play_immediately) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id, from_user, to_user;";
     const response = await client.query(sql, [
       fromUser,
       toUser,
       email,
-      new Date(dateOfBirth),
+      dateOfBirth ? new Date(dateOfBirth) : null,
       wishText,
       imageUrl,
+      allowToPlayImmediately === "yes" ? true : false,
     ]);
 
     if (!response.rowCount) {

@@ -116,8 +116,14 @@ window.addEventListener("load", async () => {
 
   loaderElement.remove();
   mainElement.style.display = "block";
-  const { date_of_birth, from_user, image_url, to_user, wish_text } =
-    response.success;
+  const {
+    date_of_birth,
+    from_user,
+    image_url,
+    to_user,
+    wish_text,
+    allow_to_play_immediately,
+  } = response.success;
 
   wish.fromUser = from_user;
   wish.wishText = wish_text;
@@ -128,7 +134,10 @@ window.addEventListener("load", async () => {
 
   // If not yet birthday, show message
   const dateOfBirth = new Date(new Date(date_of_birth).toLocaleString());
-  if (dateOfBirth.getTime() - new Date().getTime() > 0) {
+  if (
+    dateOfBirth.getTime() - new Date().getTime() > 0 &&
+    !allow_to_play_immediately
+  ) {
     const days = (dateOfBirth.getTime() - new Date().getTime()) / 86400000;
     mainElement.innerHTML = `<h1 style="margin: 2rem">${Math.round(
       days

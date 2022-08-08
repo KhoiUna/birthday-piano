@@ -12,7 +12,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     }
 
     const sql =
-      "SELECT from_user, to_user, date_of_birth, image_url, wish_text FROM wish WHERE id = $1;";
+      "SELECT from_user, to_user, date_of_birth, image_url, wish_text, allow_to_play_immediately FROM wish WHERE id = $1;";
     const { rows } = await client.query(sql, [req.query.id]);
 
     if (!rows.length) {
@@ -22,7 +22,14 @@ export default async (req: VercelRequest, res: VercelResponse) => {
       });
     }
 
-    const { from_user, to_user, date_of_birth, image_url, wish_text } = rows[0];
+    const {
+      from_user,
+      to_user,
+      date_of_birth,
+      image_url,
+      wish_text,
+      allow_to_play_immediately,
+    } = rows[0];
 
     return res.status(200).json({
       success: {
@@ -31,6 +38,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
         date_of_birth,
         image_url,
         wish_text,
+        allow_to_play_immediately,
       },
       error: false,
     });
