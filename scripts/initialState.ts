@@ -127,9 +127,13 @@ window.addEventListener("load", async () => {
     ", " + to_user;
 
   // If not yet birthday, show message
-  const dateOfBirth = new Date(date_of_birth);
+  const dateOfBirth = new Date(new Date(date_of_birth).toLocaleString());
   if (dateOfBirth.getTime() - new Date().getTime() > 0) {
-    mainElement.innerHTML = `<h1 style="margin: 2rem">Your birthday is yet to come! You cannot see it yet!</h1>`;
+    const days = (dateOfBirth.getTime() - new Date().getTime()) / 86400000;
+    mainElement.innerHTML = `<h1 style="margin: 2rem">${Math.round(
+      days
+    )} days till your birthday! You cannot see it yet!</h1>`;
+    return;
   }
 
   document.querySelector<HTMLImageElement>("#avatar").src = image_url;
