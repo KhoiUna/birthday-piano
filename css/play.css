@@ -39,7 +39,8 @@ form label {
   font-weight: bold;
 }
 form input,
-textarea {
+textarea,
+select {
   width: 100%;
   border-radius: 5px;
   padding: 9px;
