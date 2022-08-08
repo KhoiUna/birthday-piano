@@ -17,6 +17,8 @@ const form = document.querySelector("form");
 const dateInputResponse = document.querySelector<HTMLParagraphElement>(
   "#date-input-response"
 );
+const textareaResponse =
+  document.querySelector<HTMLParagraphElement>("#textarea-response");
 const submitResponse =
   document.querySelector<HTMLParagraphElement>("#submit-response");
 const submitButton =
@@ -66,6 +68,52 @@ const upload = async (e: Event) => {
 // Add event listener to elements
 file.addEventListener("change", upload);
 
+document.querySelector<HTMLInputElement>("input[type='date']").addEventListener(
+  "change",
+
+  (e) => {
+    const target = e.target as HTMLInputElement;
+
+    // Validate date of birth
+    const birthday = new Date(target.value);
+    if (birthday.getTime() - new Date().getTime() < 0) {
+      dateInputResponse.style.display = "block";
+      dateInputResponse.innerText = "* Invalid date";
+      dateInputResponse.style.color = red;
+
+      submitButton.innerHTML = "Submit";
+      submitButton.disabled = false;
+
+      submitResponse.innerText = "Invalid input. Please check again.";
+      submitResponse.style.color = red;
+      return;
+    }
+
+    dateInputResponse.style.display = "none";
+  }
+);
+
+document.querySelector("textarea").addEventListener("keyup", (e) => {
+  const target = e.target as HTMLTextAreaElement;
+
+  document.querySelector<HTMLParagraphElement>(
+    "#word-count"
+  ).innerText = `${target.value.length}`;
+});
+document.querySelector("textarea").addEventListener("change", (e) => {
+  const target = e.target as HTMLTextAreaElement;
+
+  // Validate wish text length to be less than or equal to 100 characters
+  if (target.value.length > 100) {
+    textareaResponse.style.display = "block";
+    textareaResponse.style.color = red;
+    textareaResponse.innerText = "Wish text can only contain 100 characters";
+    return;
+  }
+
+  textareaResponse.style.display = "none";
+});
+
 form.addEventListener("submit", async (e: Event) => {
   e.preventDefault();
   submitButton.innerHTML = "Submitting...";
@@ -84,23 +132,6 @@ form.addEventListener("submit", async (e: Event) => {
     submitButton.disabled = false;
     alert("Please fill out all fields");
     return;
-  }
-
-  // Validate date of birth
-  const birthday = new Date(userInput["date-of-birth"]);
-  if (birthday.getTime() - new Date().getTime() < 0) {
-    dateInputResponse.style.display = "block";
-    dateInputResponse.innerText = "* Invalid date";
-    dateInputResponse.style.color = red;
-
-    submitButton.innerHTML = "Submit";
-    submitButton.disabled = false;
-
-    submitResponse.innerText = "Invalid input. Please check again.";
-    submitResponse.style.color = red;
-    return;
-  } else {
-    dateInputResponse.style.display = "none";
   }
 
   // Captcha

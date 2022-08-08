@@ -189,9 +189,25 @@
               required
               name="wish"
               placeholder="Write your wish here..."
-              rows="5"
+              rows="3"
+              maxlength="100"
             ></textarea>
+            <br />
           </div>
+          <p
+            style="
+              text-align: right;
+              font-size: 0.8rem;
+              color: #525252;
+              margin: 0 1rem 0 0;
+            "
+          >
+            <span id="word-count">0</span>/100
+          </p>
+          <p
+            id="textarea-response"
+            style="font-size: 1rem; text-align: left; display: none"
+          ></p>
 
           <div>
             <label for="gift">Upload your picture:</label>
@@ -200,6 +216,7 @@
               type="file"
               id="upload-image"
               style="border: none"
+              accept="image/*"
             />
 
             <div id="status"></div>

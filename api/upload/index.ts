@@ -3,15 +3,38 @@ import client from "../../db/client";
 
 export default async (req: VercelRequest, res: VercelResponse) => {
   if (req.method === "POST") {
+    const fromUser = req.body["from-user"];
+    const toUser = req.body["to-user"];
+    const email = req.body.email;
+    const dateOfBirth = req.body["date-of-birth"];
+    const wishText = req.body.wish;
+    const imageUrl = req.body["image-url"];
+
+    if (
+      fromUser.trim() === "" ||
+      toUser.trim() === "" ||
+      email.trim() === "" ||
+      dateOfBirth === "" ||
+      wishText.trim() === "" ||
+      imageUrl === ""
+    )
+      return res.status(400).send("Please fill out all fields");
+
+    if (fromUser.length > 45 || toUser.length > 45)
+      return res.status(400).send("Username can only contain 45 characters");
+
+    if (wishText.length > 100)
+      return res.status(400).send("Wish text can only contain 100 characters");
+
     const sql =
       "INSERT INTO wish (from_user, to_user, email, date_of_birth, wish_text, image_url) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id, from_user, to_user;";
     const response = await client.query(sql, [
-      req.body["from-user"],
-      req.body["to-user"],
-      req.body.email,
-      new Date(req.body["date-of-birth"]),
-      req.body.wish,
-      req.body["image-url"],
+      fromUser,
+      toUser,
+      email,
+      new Date(dateOfBirth),
+      wishText,
+      imageUrl,
     ]);
 
     if (!response.rowCount) {
