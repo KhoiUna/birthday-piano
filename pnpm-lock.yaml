@@ -2,12 +2,14 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/pg': ^8.6.5
+  '@types/uuid': ^8.3.4
   '@vercel/node': ^2.5.6
   axios: ^0.27.2
   imagekit: ^4.1.1
   imagekit-javascript: ^1.5.2
   pg: ^8.7.3
   typescript: ^4.7.4
+  uuid: ^8.3.2
   vite: ^3.0.0
 
 dependencies:
@@ -16,9 +18,11 @@ dependencies:
   imagekit-javascript: 1.5.2
   pg: 8.7.3
   typescript: 4.7.4
+  uuid: 8.3.2
 
 devDependencies:
   '@types/pg': 8.6.5
+  '@types/uuid': 8.3.4
   '@vercel/node': 2.5.6
   vite: 3.0.4
 
@@ -91,6 +95,10 @@ packages:
       '@types/node': 18.6.4
       pg-protocol: 1.5.0
       pg-types: 2.2.0
+    dev: true
+
+  /@types/uuid/8.3.4:
+    resolution: {integrity: sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==}
     dev: true
 
   /@vercel/build-utils/5.2.0:
