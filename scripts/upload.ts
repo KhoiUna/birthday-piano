@@ -210,5 +210,13 @@ form.addEventListener("submit", async (e: Event) => {
   submitButton.innerHTML = "Submit";
   submitButton.disabled = false;
 
+  // Reset form and userInput
   form.reset();
+  userInput["allow-to-play-immediately"] = "";
+  userInput["date-of-birth"] = "";
+  userInput["from-user"] = "";
+  userInput["to-user"] = "";
+  userInput["image-url"] = "";
+  userInput.wish = "";
+  userInput.email = "";
 });
