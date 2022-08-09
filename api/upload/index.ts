@@ -80,7 +80,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     await sendEmail(
       email,
       fromUser,
-      `${process.env.APP_URL}/?id=${response.rows[0].id}`
+      `${process.env.APP_URL}/?id=${response.rows[0].id}&utm_source=Email&utm_medium=Email&utm_id=UserSharing`
     );
 
     return res.status(200).json({
