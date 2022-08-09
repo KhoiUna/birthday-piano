@@ -1,5 +1,30 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import client from "../../db/client";
+import Mailgun from "mailgun.js";
+const formData = require("form-data");
+
+const sendEmail = (email: string, username: string, birthdayLink: string) => {
+  const mailgun = new Mailgun(formData);
+  const mg = mailgun.client({
+    username: "api",
+    key: process.env.MAILGUN_API_KEY,
+  });
+
+  // Send a message to the specified email address
+  mg.messages
+    .create(process.env.MAILGUN_DOMAIN, {
+      from: "Khoi Nguyen <khoi@mg.khoiuna.info>",
+      to: [email],
+      subject: "Share your birthday link",
+      template: "birthday.khoiuna.info",
+      "h:X-Mailgun-Variables": JSON.stringify({
+        username,
+        birthdayLink,
+      }),
+    })
+    .then((msg) => console.log("Email sent!"))
+    .catch((err) => console.error(err));
+};
 
 export default async (req: VercelRequest, res: VercelResponse) => {
   if (req.method === "POST") {
@@ -45,6 +70,13 @@ export default async (req: VercelRequest, res: VercelResponse) => {
         error: "Error saving wish",
       });
     }
+
+    // Send email to user
+    sendEmail(
+      email,
+      fromUser,
+      `${process.env.APP_URL}/?id=${response.rows[0].id}`
+    );
 
     return res.status(200).json({
       success: {
