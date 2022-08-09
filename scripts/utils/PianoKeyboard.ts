@@ -5,7 +5,7 @@ export default class PianoKeyboard {
 
     // @ts-ignore
     const sound = createjs.Sound.play(key); // play using id
-    sound.volume = 0.5;
+    sound.volume = 0.05;
   }
 
   //Change keyboard's color functions

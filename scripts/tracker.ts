@@ -409,7 +409,7 @@ export const trackerFunction = (tracker: number) => {
     // Play Cheering sound
     // @ts-ignore
     const sound = createjs.Sound.play("cheering"); // play using id
-    sound.volume = 0.5;
+    sound.volume = 0.05;
 
     // Show quote
     document.querySelector("#gift").addEventListener("click", displayQuote);
