@@ -5,7 +5,7 @@ import { validate } from "uuid";
 export default async (req: VercelRequest, res: VercelResponse) => {
   if (req.method === "GET") {
     if (!validate(req.query.id as string)) {
-      return res.status(200).json({
+      return res.status(400).json({
         success: false,
         error: "No birthday wish found",
       });
