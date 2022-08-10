@@ -203,7 +203,7 @@ form.addEventListener("submit", async (e: Event) => {
     return;
   }
 
-  const linkToShare = `${window.location.origin}/?id=${response.success.id}&utm_source=WebApp&utm_id=UserSharing`;
+  const linkToShare = `${window.location.origin}/?id=${response.success.id}`;
   submitResponse.innerHTML = `Successfully submitted!<br/>Here is your link to share: <a href="${linkToShare}">Copy this link!</a><br/>An email with this link will be sent to you (make sure to check your spam folder).`;
   submitResponse.style.color = "green";
 
