@@ -132,16 +132,13 @@ window.addEventListener("load", async () => {
   document.querySelector<HTMLSpanElement>("#to-user").innerText =
     ", " + to_user;
 
-  // If not yet birthday, show message
+  // If it is not birthday yet, show message
   const dateOfBirth = new Date(new Date(date_of_birth).toLocaleString());
-  if (
-    dateOfBirth.getTime() - new Date().getTime() > 0 &&
-    !allow_to_play_immediately
-  ) {
-    const days = (dateOfBirth.getTime() - new Date().getTime()) / 86400000;
-    mainElement.innerHTML = `<h1 style="margin: 2rem">${Math.round(
-      days
-    )} days till your birthday! You cannot see it yet!</h1>`;
+  const daysDifference = Math.round(
+    (dateOfBirth.getTime() - new Date().getTime()) / 86400000
+  );
+  if (daysDifference > 0) {
+    mainElement.innerHTML = `<h1 style="margin: 2rem">${daysDifference} days till your birthday! You cannot see it yet!</h1>`;
     return;
   }
 
