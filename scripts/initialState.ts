@@ -2,7 +2,7 @@ import { red } from "./global";
 import { parseParam } from "./helpers/parseParam";
 import { randomTheme } from "./helpers/randomTheme";
 import Wish from "./utils/Wish";
-import khoiAvatar from "../img/avatar.jpg";
+import khoiAvatar from "../img/avatar.webp";
 
 // Declare elements
 const mainElement = document.querySelector("main");
