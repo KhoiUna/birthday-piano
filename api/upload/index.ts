@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import client from "../../db/client";
+import client from "../../db/client.js";
 import Mailgun from "mailgun.js";
 const formData = require("form-data");
 
